@@ -190,22 +190,42 @@ a*b: 3.24 * 5.67 = ...
 
 # BMI z obsługą wyjątków
 
-masa = input("Podaj masę ciała w kg: ")
-wzrost = input("Podaj zwój wzrost w m: ")
+# masa = input("Podaj masę ciała w kg: ")
+# wzrost = input("Podaj zwój wzrost w m: ")
 
-try:
-    masa = float(masa)
-except:
-    print("nie udało się masy zrzutować na float")
-    exit()
-
-
-try:
-    wzrost = float(wzrost)
-except:
-    print("nie udało się wzrostu zrzutować na float")
-    exit()
+# try:
+#     masa = float(masa)
+# except:
+#     print("nie udało się masy zrzutować na float")
+#     exit()
 
 
-BMI = masa / wzrost**2
-print(f"Twoje BMI wynosi: {BMI}")
+# try:
+#     wzrost = float(wzrost)
+# except:
+#     print("nie udało się wzrostu zrzutować na float")
+#     exit()
+
+
+# BMI = masa / wzrost**2
+# print(f"Twoje BMI wynosi: {BMI}")
+
+
+# l = 120
+
+# if l < 0:
+#     print("ujemna")
+# elif l > 100:
+#     print("więcej niż 100")
+# elif l > 50:
+#     print("więcej niż 50")
+
+l = 25
+if 100 < l < 500:
+    print("wersja 1 pomiędzy 100 a 500")
+
+if l > 100 and l < 500:
+    print("wersja 2 pomiędzy 100 a 500")
+
+if l < 100 or l > 1000:
+    print("pniżej 100 albo ponad 1000")
