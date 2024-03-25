@@ -62,3 +62,19 @@
 
 # zmienna = input("podaj jakiś ciąg: ")
 # print(zmienna)
+
+
+# print("""
+#       tu będzie int: {zmienna_int}\n
+#       zmienna_string: {zmienna_string}
+#       zmienna_int_zmiana: {zmienna_int_zmiana}
+#       """)
+
+
+
+# ZADANIE
+
+"""
+Napisz program, który pobierze od użytkownika imię i nazwisko,
+a potem wypisze w konsoli pozdrowienie "Witaj IMIĘ NAZWISKO!"
+"""
