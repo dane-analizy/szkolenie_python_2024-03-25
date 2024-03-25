@@ -143,19 +143,69 @@ a*b: 3.24 * 5.67 = ...
 
 # wzrost ** 2
 
-wzrost = input("Podaj swój wzrost w centrymetrach: ")
-if wzrost.isnumeric() and wzrost != "0":
-    wzrost = float(wzrost)
-    wzrost = wzrost / 100
-else:
-    print("Wzrost nie może być ani stringiem ani zerem.")
+# wzrost = input("Podaj swój wzrost w centrymetrach: ")
+# if wzrost.isnumeric() and wzrost != "0":
+#     wzrost = float(wzrost)
+#     wzrost = wzrost / 100
+# else:
+#     print("Wzrost nie może być ani stringiem ani zerem.")
+#     exit()
+
+# waga = input("Podaj swoją wagę w kg: ")
+# if waga.isnumeric():
+#     waga = float(waga)
+# else:
+#     print("Podano błędą wartość wagi.")
+#     exit()
+# BMI = waga / wzrost**2
+# print(f"Twoje BMI wynosi: {BMI}")
+
+
+# masa = input("Podaj masę ciała w kg: ")
+# wzrost = input("Podaj zwój wzrost w m: ")
+
+# if masa.isnumeric():
+#     masa = float(masa)
+
+# if wzrost.isnumeric():
+#     wzrost = float(wzrost)
+
+# BMI = masa / wzrost**2
+# print(f"Twoje BMI wynosi: {BMI}")
+
+
+# obsługa wyjątków
+
+# l = "1.23d4"
+# f = None
+
+# try:
+#     f = float(l)
+# except Exception as e:
+#     print("nie udało się")
+#     print(e)
+
+# print(f"{l=} => {f=}")
+
+
+# BMI z obsługą wyjątków
+
+masa = input("Podaj masę ciała w kg: ")
+wzrost = input("Podaj zwój wzrost w m: ")
+
+try:
+    masa = float(masa)
+except:
+    print("nie udało się masy zrzutować na float")
     exit()
 
-waga = input("Podaj swoją wagę w kg: ")
-if waga.isnumeric():
-    waga = float(waga)
-else:
-    print("Podano błędą wartość wagi.")
+
+try:
+    wzrost = float(wzrost)
+except:
+    print("nie udało się wzrostu zrzutować na float")
     exit()
-BMI = waga / wzrost**2
+
+
+BMI = masa / wzrost**2
 print(f"Twoje BMI wynosi: {BMI}")
