@@ -108,26 +108,37 @@ a*b: 3.24 * 5.67 = ...
 # print("Po sprwadzaniu")
 
 
-a = input("Podaj liczbę A: ")
-if a.isnumeric():
-    a = float(a)
-else:
-    print("A musi być liczbą. Kończę program")
-    exit()
-    
-b = input("Podaj liczbę B: ")
-if b.isnumeric():
-    b = float(b)
-else:
-    print("B musi być liczbą. Kończę program")
-    exit()
+# a = input("Podaj liczbę A: ")
+# if a.isnumeric():
+#     a = float(a)
+# else:
+#     print("A musi być liczbą. Kończę program")
+#     exit()
 
-wynik_dodawania = a + b
-wynik_odejmowania = a - b
-wynik_mnozenia = a * b
+# b = input("Podaj liczbę B: ")
+# if b.isnumeric():
+#     b = float(b)
+# else:
+#     print("B musi być liczbą. Kończę program")
+#     exit()
 
-print(f"""
-Wynik dodawania liczby {a} oraz {b}: {wynik_dodawania}
-Wynik obejmowania liczby {a=} oraz {b=}: {wynik_odejmowania}
-Wynik mnożenia liczby {a=} oraz {b=}: {wynik_mnozenia}
-""")
+# wynik_dodawania = a + b
+# wynik_odejmowania = a - b
+# wynik_mnozenia = a * b
+
+# print(f"""
+# Wynik dodawania liczby {a} oraz {b}: {wynik_dodawania}
+# Wynik obejmowania liczby {a=} oraz {b=}: {wynik_odejmowania}
+# Wynik mnożenia liczby {a=} oraz {b=}: {wynik_mnozenia}
+# """)
+
+
+# ZADANIE
+
+# Napisz program, który pobierze od użytkownika masę i wzrost, a następnie policzy BMI i wypisze wynik na konsolę.
+
+# BMI = masa / wzrost^2
+# masa w kg
+# wzrost w m
+
+# wzrost ** 2
