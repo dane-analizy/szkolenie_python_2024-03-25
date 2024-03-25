@@ -347,3 +347,33 @@ Napisz symulator lokaty Symulator ma przyjmować zmienne:
 Symulator ma dla każdego miesiąca lokaty wypisać który to miesiąc oraz ile mamy aktualnie zgromadzone po doliczeniu odsetek. 
 Zakładamy kapitalizację odsetek co miesiąc
 """
+
+# ilosc_miesiecy = 12
+# oprocentowanie = 5 # wartość w procentach w skali roku
+# kwota = 100_123
+
+# oprocentowanie = oprocentowanie / 100 / 12 # przeliczenie na % odsetek w skali miesiąca
+
+# print("wersja FOR:")
+
+# for i in range(ilosc_miesiecy):
+#     kwota = kwota + (kwota * oprocentowanie)
+#     print(f"Po miesiacu {i+1} otrzymasz kwote rowna: {kwota}")
+
+
+# print("wersja WHILE:")
+# kwota = 100_123
+# i = 0
+# while i < ilosc_miesiecy:
+#     i = i + 1
+#     kwota = kwota + (kwota * oprocentowanie)
+#     print(f"W {i} miesiącu, kwota lokaty wynosi: {kwota}")
+
+
+
+# ZADANIE
+
+"""
+Napisz pętlę while która będzie wyświetlała kolejne potęgi liczby 2 aż wartość potęgi (wynik potęgowania)
+nie przekroczy wartości podanej przez użytkownika
+"""
