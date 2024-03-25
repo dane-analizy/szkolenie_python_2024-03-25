@@ -87,10 +87,48 @@ a potem wypisze w konsoli pozdrowienie "Witaj IMIĘ NAZWISKO!"
 # ZADANIE
 
 """
-Napisz prosty kalkulator - pobiera od użytkownika dwie liczby a i b, a potem wyświetla wyniki działań a+b, a-b, a*b, wypisując np."
+Napisz prosty kalkulator - pobiera od użytkownika dwie liczby a i b, a potem wyświetla wyniki działań a+b, a-b, a*b, wypisując np.:
 
 a+b: 3.24 + 5.67 = ...
 a-b: 3.24 - 5.67 = ...
 a*b: 3.24 * 5.67 = ...
 
 """
+
+
+# liczba = -10
+
+# print("Przed sprwadzaniem")
+
+# if liczba > 0:
+#     print("liczba większa od zera")
+# else:
+#     print("nie jest większa od zera")
+
+# print("Po sprwadzaniu")
+
+
+a = input("Podaj liczbę A: ")
+b = input("Podaj liczbę B: ")
+
+if a.isnumeric():
+    a = float(a)
+else:
+    print("A musi być liczbą. Kończę program")
+    exit()
+
+if b.isnumeric():
+    b = float(b)
+else:
+    print("B musi być liczbą. Kończę program")
+    exit()
+
+wynik_dodawania = a + b
+wynik_odejmowania = a - b
+wynik_mnozenia = a * b
+
+print(f"""
+Wynik dodawania liczby {a} oraz {b}: {wynik_dodawania}
+Wynik obejmowania liczby {a=} oraz {b=}: {wynik_odejmowania}
+Wynik mnożenia liczby {a=} oraz {b=}: {wynik_mnozenia}
+""")
