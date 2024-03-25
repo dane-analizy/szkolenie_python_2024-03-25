@@ -401,3 +401,24 @@ nie przekroczy wartości podanej przez użytkownika
 #     print(numer, i)
 
 # print(list(range(100)))
+
+# długość tekstu
+# s = "Ala ma kota"
+# l = 100
+# print(len(s))
+# print(len(range(10)))
+
+# zmiana wielkości liter
+# s = "ala MA kota. a Kot\nma\nPsa"
+# print(s.upper(), end="\n====\n")
+# print(s.lower(), end="\n====\n")
+# print(s.capitalize(), "guowhgouwr", end="\n====\n")
+# print(s.title(), end="\n====\n")
+
+
+# oczyszczanie pustych znaków
+# s = "   ala MA kota. a Kot ma Psa   hugy\n\n"
+# print(f"|{s}|")
+# print(f"|{s.strip()}|")
+# print(f"|{s.lstrip()}|")
+# print(f"|{s.rstrip()}|")
