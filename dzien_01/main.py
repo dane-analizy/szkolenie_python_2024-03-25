@@ -422,3 +422,18 @@ nie przekroczy wartości podanej przez użytkownika
 # print(f"|{s.strip()}|")
 # print(f"|{s.lstrip()}|")
 # print(f"|{s.rstrip()}|")
+
+# zamiana znaków
+# s = "Ala ma kota. Pies ma kość. Tomek ma piłkę."
+# print(s)
+# print(s.replace(".", "="))
+# print(s.replace(".", ""))
+
+
+# ZADANIE
+
+"""
+Napisz program, który przyjmie od użytkownika ciąg tekstowy, następnie usunie z niego znaki: ,.?!
+a następnie powiększony do dużych liter wyświetli w konsoli.
+"""
+
