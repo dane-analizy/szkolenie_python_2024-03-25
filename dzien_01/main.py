@@ -142,3 +142,20 @@ a*b: 3.24 * 5.67 = ...
 # wzrost w m
 
 # wzrost ** 2
+
+wzrost = input("Podaj swój wzrost w centrymetrach: ")
+if wzrost.isnumeric() and wzrost != "0":
+    wzrost = float(wzrost)
+    wzrost = wzrost / 100
+else:
+    print("Wzrost nie może być ani stringiem ani zerem.")
+    exit()
+
+waga = input("Podaj swoją wagę w kg: ")
+if waga.isnumeric():
+    waga = float(waga)
+else:
+    print("Podano błędą wartość wagi.")
+    exit()
+BMI = waga / wzrost**2
+print(f"Twoje BMI wynosi: {BMI}")
