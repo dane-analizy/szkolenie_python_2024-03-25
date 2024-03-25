@@ -437,3 +437,34 @@ Napisz program, który przyjmie od użytkownika ciąg tekstowy, następnie usuni
 a następnie powiększony do dużych liter wyświetli w konsoli.
 """
 
+# sposób pierwszy
+# t = input("Podaj Tekst:")
+# t = t.replace(" ", "")
+# t = t.replace(",", "")
+# t = t.replace(".", "")
+# t = t.replace("?", "")
+# t = t.replace("!", "")
+# print(t.upper())
+
+
+# sposób drugi
+# t = input("Podaj Tekst:")
+# zle_znaki = ' .,?!#$%&*!@%&()'
+
+# for zly_znak in zle_znaki:
+#     t = t.replace(zly_znak, "")
+
+# print(t.upper())
+
+
+# sposób trzeci
+# tekst_wejsciowy = input("Podaj Tekst:")
+# zle_znaki = " .,?!"
+
+# tekst_wyjsciowy = ""
+# for litera in tekst_wejsciowy:
+#     if litera in zle_znaki:
+#         continue
+#     tekst_wyjsciowy = tekst_wyjsciowy + litera
+
+# print(tekst_wyjsciowy.upper())
