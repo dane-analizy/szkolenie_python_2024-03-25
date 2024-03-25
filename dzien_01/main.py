@@ -494,8 +494,49 @@ a następnie powiększony do dużych liter wyświetli w konsoli.
 # czytanie linia po linii
 # for linia in open("dlugosc_linii.txt", "r", encoding="utf-8"):
 #     print(linia.strip(), end="|")
-    
-    
+
+
 # ZADANIE
 
 # Napisz program który wyświetli na konsoli niepuste linie z pliku tekstowego, którego nazwę poda użytkownik
+
+# nazwa_pliku = input("Podaj nazwę pliku: ")
+# nazwa_pliku = "dlugosc_linii.txt"
+
+# for linia in open(nazwa_pliku, "r", encoding="utf-8"):
+#     if not len(linia.strip()):
+#         continue
+#     print(linia.strip())
+
+
+# nazwa_pliku = "dlugosc_linii.txt"
+
+# for linia in open(nazwa_pliku, "r", encoding="utf-8"):
+#     if len(linia.strip()) != 0:
+#         print(linia.strip())
+
+
+# if ...:
+#     if egwgw:
+#         if egege:
+#             zrbo
+#         else:
+#            zbwgwg
+#     else:
+#         ijgiwg
+# else:
+#     rngiwgj
+
+
+# if not ...
+#     continue
+
+
+# przeszukiwanie w pliku - komenda grep
+
+nazwa_pliku = "pan-tadeusz.txt"
+szukane_slowo = "szlachta"
+
+for numer_linii, linia in enumerate(open(nazwa_pliku, "r", encoding="utf-8"), start=1):
+    if szukane_slowo.lower() in linia.lower():
+        print(f"{numer_linii:>6}: {linia.strip()}")
