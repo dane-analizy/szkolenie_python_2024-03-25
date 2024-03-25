@@ -109,14 +109,13 @@ a*b: 3.24 * 5.67 = ...
 
 
 a = input("Podaj liczbę A: ")
-b = input("Podaj liczbę B: ")
-
 if a.isnumeric():
     a = float(a)
 else:
     print("A musi być liczbą. Kończę program")
     exit()
-
+    
+b = input("Podaj liczbę B: ")
 if b.isnumeric():
     b = float(b)
 else:
