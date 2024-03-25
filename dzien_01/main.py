@@ -228,7 +228,7 @@ a*b: 3.24 * 5.67 = ...
 #     print("wersja 2 pomiędzy 100 a 500")
 
 # if l < 100 or l > 1000:
-#     print("pniżej 100 albo ponad 1000")
+#     print("poniżej 100 albo ponad 1000")
 
 
 # pętla 10 kroków
@@ -239,3 +239,40 @@ a*b: 3.24 * 5.67 = ...
 # ZADANIE
 
 # Wyświetl 20 kolejnych potęg liczby 2.
+
+# i = 2
+# for n in range(20):
+#     print(f"{i} do potęgi {n} = {i**n}")
+
+# for i in range(20):
+#     j = float(i)
+#     j = j**2
+#     print(f"{j=}")
+
+# # 20 elementów - od 0 do 19
+# for i in range(20):
+#     print(f"{i=}")
+
+
+# # 10 elementów - od 10 do 19
+# for i in range(10, 20):
+#     print(f"{i=}")
+
+# # 5 elementów - od 10 do 19, co 2
+# for i in range(10, 20, 2):
+#     print(f"{i=}")
+
+# i = 5
+# print(i % 2)
+# print(i // 2)
+
+# for i in range(2, 21, 2):
+#     print(i)
+
+# for i in range(21):
+#     if i % 2 != 0:
+#         print(i)
+        
+        
+# ZADANIE
+# Wydrukuj liczby od 1 do 100 razem z informacją czy liczba jest parzysta czy nieparzysta.
