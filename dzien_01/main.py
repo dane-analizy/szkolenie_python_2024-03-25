@@ -253,7 +253,6 @@ a*b: 3.24 * 5.67 = ...
 # for i in range(20):
 #     print(f"{i=}")
 
-
 # # 10 elementów - od 10 do 19
 # for i in range(10, 20):
 #     print(f"{i=}")
@@ -262,9 +261,10 @@ a*b: 3.24 * 5.67 = ...
 # for i in range(10, 20, 2):
 #     print(f"{i=}")
 
+# reszta z dzielenia i część całkowita
 # i = 5
-# print(i % 2)
-# print(i // 2)
+# print(i % 2) # reszta
+# print(i // 2) # część całkowita
 
 # for i in range(2, 21, 2):
 #     print(i)
@@ -272,7 +272,78 @@ a*b: 3.24 * 5.67 = ...
 # for i in range(21):
 #     if i % 2 != 0:
 #         print(i)
-        
-        
+
+
 # ZADANIE
 # Wydrukuj liczby od 1 do 100 razem z informacją czy liczba jest parzysta czy nieparzysta.
+
+# for i in range(100):
+#     if (i + 1) % 2 == 0:
+#         print(f"{i+1} - jest parzysta")
+#     if (i + 1) % 2 != 0:
+#         print(f"{i+1} - nie jest parzysta")
+
+
+# for i in range(1, 101):
+#     if i % 2 == 0:
+#         print(f"{i} - jest parzysta")
+#     else:
+#         print(f"{i} - nie jest parzysta")
+
+
+# for i in range(1, 101):
+#     if i % 2 == 0:
+#         print(f"{i} jest liczbą parzystą")
+#     else:
+#         print(f"{i} jest liczbą nieparzystą")
+# else:
+#     print("Ja wykonam się zawsze")
+
+
+# idż do kolejnego kroku
+# for i in range(-10, 10):
+#     print(i)
+#     if i == 0:
+#         continue
+#     print(1 / i)
+
+# przerwij pętlę
+# for i in range(-10, 10):
+#     print(i)
+#     if i == 0:
+#         break
+#     print(1 / i)
+
+# for...else
+# for i in range(-10, 10):
+#     print(i)
+#     if i == 0:
+#         continue # porównaj z break
+#     print(1 / i)
+# else:
+#     print("jestem else do for")
+
+# i = 0
+# while i < 10:
+#     print(i)
+#     i = i + 1
+
+# i = 1
+# while True:
+#     i += 1
+#     if i % 2 == 0:
+#         print(i)
+#     if i > 1000:
+#         break
+
+
+# ZADANIE
+
+"""
+Napisz symulator lokaty Symulator ma przyjmować zmienne:
+- kwotę lokaty
+- oprocentowanie w skali roku
+- ilość miesięcy na jaką zakładamy lokatę
+Symulator ma dla każdego miesiąca lokaty wypisać który to miesiąc oraz ile mamy aktualnie zgromadzone po doliczeniu odsetek. 
+Zakładamy kapitalizację odsetek co miesiąc
+"""
