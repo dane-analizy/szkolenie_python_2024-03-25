@@ -483,4 +483,19 @@ a następnie powiększony do dużych liter wyświetli w konsoli.
 # else:
 #     print("Ala wyszła")
 
+# wczytanie całego pliki na raz
+# file = open("dlugosc_linii.txt", "r", encoding='utf-8')
+# file_content = file.read()
+# file.close()
+# print(file_content)
 
+# print("=+" * 60)
+
+# czytanie linia po linii
+# for linia in open("dlugosc_linii.txt", "r", encoding="utf-8"):
+#     print(linia.strip(), end="|")
+    
+    
+# ZADANIE
+
+# Napisz program który wyświetli na konsoli niepuste linie z pliku tekstowego, którego nazwę poda użytkownik
