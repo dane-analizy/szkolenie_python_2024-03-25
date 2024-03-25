@@ -220,12 +220,22 @@ a*b: 3.24 * 5.67 = ...
 # elif l > 50:
 #     print("więcej niż 50")
 
-l = 25
-if 100 < l < 500:
-    print("wersja 1 pomiędzy 100 a 500")
+# l = 25
+# if 100 < l < 500:
+#     print("wersja 1 pomiędzy 100 a 500")
 
-if l > 100 and l < 500:
-    print("wersja 2 pomiędzy 100 a 500")
+# if l > 100 and l < 500:
+#     print("wersja 2 pomiędzy 100 a 500")
 
-if l < 100 or l > 1000:
-    print("pniżej 100 albo ponad 1000")
+# if l < 100 or l > 1000:
+#     print("pniżej 100 albo ponad 1000")
+
+
+# pętla 10 kroków
+# for i in range(10):
+#     print(f"{i=}")
+
+
+# ZADANIE
+
+# Wyświetl 20 kolejnych potęg liczby 2.
