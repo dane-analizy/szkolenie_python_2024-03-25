@@ -71,10 +71,15 @@
 #       """)
 
 
-
 # ZADANIE
 
 """
-Napisz program, który pobierze od użytkownika imię i nazwisko,
+Napisz program, który pobierze od użytkownika imię i nazwisko (osobno),
 a potem wypisze w konsoli pozdrowienie "Witaj IMIĘ NAZWISKO!"
 """
+
+# imie = input("Podaj imię: ")
+# nazwisko = input("A jak masz na nazwisko? ")
+# imie_nazwisko = f"{imie} {nazwisko}"
+# print(f"Witaj {imie_nazwisko}")
+
