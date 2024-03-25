@@ -370,10 +370,34 @@ Zakładamy kapitalizację odsetek co miesiąc
 #     print(f"W {i} miesiącu, kwota lokaty wynosi: {kwota}")
 
 
-
 # ZADANIE
 
 """
 Napisz pętlę while która będzie wyświetlała kolejne potęgi liczby 2 aż wartość potęgi (wynik potęgowania)
 nie przekroczy wartości podanej przez użytkownika
 """
+
+# wartosc_przekroczenia = 100_000
+# potega = 0
+# wynik = 2**potega
+# while wynik < wartosc_przekroczenia:
+#     print(f"2^{potega} = {wynik}")
+#     potega += 1
+#     wynik = 2**potega
+
+
+# napis = "Ala ma kota"
+# i = 0
+# for litera_w_napisie in napis:
+#     print(i, litera_w_napisie)
+#     i = i + 1
+
+# # pythonowe rozwiązanie tego co wyżej
+# napis = "Ala ma kota"
+# for i, litera in enumerate(napis):
+#     print(i, litera)
+
+# for numer, i in enumerate(range(10)):
+#     print(numer, i)
+
+# print(list(range(100)))
