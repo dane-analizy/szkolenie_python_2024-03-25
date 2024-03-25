@@ -83,3 +83,14 @@ a potem wypisze w konsoli pozdrowienie "Witaj IMIĘ NAZWISKO!"
 # imie_nazwisko = f"{imie} {nazwisko}"
 # print(f"Witaj {imie_nazwisko}")
 
+
+# ZADANIE
+
+"""
+Napisz prosty kalkulator - pobiera od użytkownika dwie liczby a i b, a potem wyświetla wyniki działań a+b, a-b, a*b, wypisując np."
+
+a+b: 3.24 + 5.67 = ...
+a-b: 3.24 - 5.67 = ...
+a*b: 3.24 * 5.67 = ...
+
+"""
