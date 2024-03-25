@@ -468,3 +468,19 @@ a następnie powiększony do dużych liter wyświetli w konsoli.
 #     tekst_wyjsciowy = tekst_wyjsciowy + litera
 
 # print(tekst_wyjsciowy.upper())
+
+# zliczenie wystąpień tekstu w tekście
+# s = "Ala ma kota. Pies ma kość. Tomek ma piłkę. Ale Ala nie lubi w nią grać. Taka to nasza Ala"
+# print(s.count("a"))
+# print(s.lower().count("a"))
+# print(s.lower().count("ala "))
+
+# czy ciąg występuje w innym ciągu
+# s = "Ala ma kota. Pies ma kość. Tomek ma piłkę. Ale Ala nie lubi w nią grać. Taka to nasza Ala"
+# # if "ala" in s.lower():
+# if "ala" in s:
+#     print("Ala obecna")
+# else:
+#     print("Ala wyszła")
+
+
