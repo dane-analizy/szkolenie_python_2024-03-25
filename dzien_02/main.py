@@ -66,3 +66,34 @@
 # print(lista[::-1]) # wszystkie w odwrotnej kolejności
 
 # print(lista[::-2]) # co drugi od końca
+
+# lista = []
+# print(range(50), type(range(50)))
+
+# lista = list(range(50))
+# print(lista, type(lista))
+
+# wstawianie do listy
+# lista = []
+# lista.append(1)
+# lista.append(2)
+# lista.append(3)
+# lista.append(4)
+# lista.insert(2, "wstawione w index 2")  # pod indeksem 2
+# print(lista)
+# lista.insert(0, "wstawione w pierszej pozycji")  # pierwszy
+# print(lista)
+# lista.insert(-1, "wstawione przedostatnie")  # przedostatni
+# print(lista)
+
+# lista = list(range(100))
+# lista.insert(-10, "abc") # 10 od końca
+# print(lista)
+
+
+# ZADANIE
+
+"""
+Napisz kod który umieści w liście 10 kolejnych potęg liczby 2.
+Następnie przeiteruj po tej liście i każdy z jej elementów wyświetl na konsoli w osobnej linii.
+"""
