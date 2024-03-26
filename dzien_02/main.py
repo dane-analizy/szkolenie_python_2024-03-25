@@ -461,3 +461,23 @@ Stwórz trzecią krotkę która ma zawierać dane z obu krotek. Trzecią krotkę
 # ZADANIE
 
 # Wygeneruj zestaw niepowtarzalnych liczb przy 100-krotnym losowaniu liczby z zakresu 1-50
+
+
+# import random
+
+# liczby = [random.randint(1, 50) for _ in range(100)]
+
+# print(set(liczby))
+
+# z1 = set([1, 2, 3, 4, 5])
+# z2 = {i for i in range(3, 10)}
+# z1.add(6)
+# print(z1, z2)
+
+# print(z1.intersection(z2))  # część wspólna
+# print(z1.union(z2))  # suma zbiorów
+
+# print(z1.difference(z2))  # różnica zbiorów z1 i z2
+# print(z2.difference(z1))  # różnica zbiorów z2 i z1
+
+# print(z1.difference(z2).union(z2.difference(z1))) 
