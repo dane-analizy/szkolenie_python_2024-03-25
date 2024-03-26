@@ -1,0 +1,29 @@
+{
+    "imie": "jan",
+    "nazwisko": "kowalski",
+    "wiek": 25,
+    "samochody": [
+        {
+            "marka": "Ford",
+            "model": "Focus",
+            "rok_produkcji": 2020
+        },
+        {
+            "marka": "Opel",
+            "model": "Astra",
+            "rok_produkcji": 2018
+        },
+        {
+            "marka": "Skoda",
+            "model": "Fabia",
+            "rok_produkcji": 2021
+        }
+    ],
+    "dlugosc_palcow_lewa_reka": [
+        3,
+        5,
+        6,
+        5,
+        4
+    ]
+}

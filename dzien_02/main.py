@@ -213,7 +213,6 @@ Posortuj je w kolejności malejącej, a następnie wyświetl każdą liczbę w o
 # for el in lista:
 #     print(el)
 
-
 # import random
 
 # lista = []
@@ -469,6 +468,9 @@ Stwórz trzecią krotkę która ma zawierać dane z obu krotek. Trzecią krotkę
 
 # print(set(liczby))
 
+# lista = [1,2,4,3,5,1,3,2,1,1]
+# lista = list(set(lista))
+
 # z1 = set([1, 2, 3, 4, 5])
 # z2 = {i for i in range(3, 10)}
 # z1.add(6)
@@ -719,9 +721,9 @@ Użyj słowników - kluczem niech będzie słowo zapisane małymi literami, a wa
 #         {"marka": "Ford", "model": "Focus", "rok_produkcji": 2020},
 #         {"marka": "Opel", "model": "Astra", "rok_produkcji": 2018},
 #     ],
-#     "dlugosc_palcow_lewa_reka": [3, 5, 6, 5,4]
+#     "dlugosc_palcow_lewa_reka": [3, 5, 6, 5, 4],
 # }
-# # print(d)
+# print(d)
 
 # # print(d['wiek'])
 
@@ -733,3 +735,28 @@ Użyj słowników - kluczem niech będzie słowo zapisane małymi literami, a wa
 
 
 # print(d["samochody"][0]['model'])
+
+
+# zapis słownika do jsona
+# import json
+# d = {
+#     "imie": "jan",
+#     "nazwisko": "kowalski",
+#     "wiek": 25,
+#     "samochody": [
+#         {"marka": "Ford", "model": "Focus", "rok_produkcji": 2020},
+#         {"marka": "Opel", "model": "Astra", "rok_produkcji": 2018},
+#     ],
+#     "dlugosc_palcow_lewa_reka": [3, 5, 6, 5, 4],
+# }
+# with open("pan_jan.json", "w", encoding="utf-8") as fp:
+#     json.dump(d, fp)
+
+
+# odzczyt jsonwa do słownika 
+import json
+
+with open("pan_jan.json", "r", encoding="utf-8") as fp:
+    d = json.load(fp)
+
+print(d)
