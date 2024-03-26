@@ -669,7 +669,7 @@ Wynikowo mają pozostać unikalni zawodnicy.
 # print(slownik.get("drugie_imie", "nie ma takiego numeru"))
 # licznik_slow = {}
 
-# licznik_slow[nowe_slowo] = licznik_slow.get(nowe_slowo, 0) + 1 
+# licznik_slow[nowe_slowo] = licznik_slow.get(nowe_slowo, 0) + 1
 
 
 # ZADANIE
@@ -678,3 +678,10 @@ Wynikowo mają pozostać unikalni zawodnicy.
 Policz ile razy występują poszczególne słowa w tekście "Pana Tadeusza".
 Użyj słowników - kluczem niech będzie słowo zapisane małymi literami, a wartością - liczba jego wystąpień.
 """
+
+# wczytać cały plik open().read()
+# zamienić tekst na małe litery
+# zbudować pusty słownik
+# podzielić tekst na słowa split()
+# przejść słowo po słowie i dodać w słowniku odpowiednią liczbę
+# licznik_slow[nowe_slowo] = licznik_slow.get(nowe_slowo, 0) + 1
