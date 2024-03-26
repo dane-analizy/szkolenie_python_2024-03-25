@@ -189,9 +189,9 @@ Następnie przeiteruj po tej liście i każdy z jej elementów wyświetl na kons
 # randint()
 
 
-import random
+# import random
 
-print(random.randint(1, 100))
+# print(random.randint(1, 100))
 
 
 # ZADANIE
@@ -201,3 +201,52 @@ Wygeneruj listę 10 losowych liczb z zakresu 1-100.
 Posortuj je w kolejności malejącej, a następnie wyświetl każdą liczbę w oddzielnej linii.
 """
 
+# import random
+
+# lista = []
+# for i in range(10):
+#     liczba_losowa = random.randint(1, 100)
+#     lista.append(liczba_losowa)
+
+# lista.sort(reverse=True)
+
+# for el in lista:
+#     print(el)
+
+
+# import random
+
+# lista = []
+# for _ in range(10):
+#     lista.append(random.randint(1, 100))
+
+# for el in sorted(lista, reverse=True):
+#     print(el)
+
+
+# import random
+
+# lista = []
+# for _ in range(10):
+#     lista.append(random.randint(1, 100))
+
+# for el in sorted(lista, reverse=True):
+#     print(el)
+
+
+# list comprehention / listy składane
+import random
+
+# lista = [random.randint(1, 100) for _ in range(10)]
+lista = [i for i in range(10)]
+
+for el in sorted(lista, reverse=True):
+     print(el)
+
+
+# ZADANIE
+
+"""
+Korzystając z list składanych wygeneruj listę 10 kolejnych potęg dwójki.
+Wyświetl tę listę. Spróbuj zrobić to w jak najkrótszym zapisie.
+"""
