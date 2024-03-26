@@ -597,10 +597,10 @@ Wynikowo mają pozostać unikalni zawodnicy.
 #     imie, nazwisko = osoba[0], osoba[1]
 #     wzrost = float(osoba[2]) / 100
 #     waga = float(osoba[3])
-    
+
 #     # wyliczenie BMI
 #     bmi = waga / wzrost**2
-    
+
 #     # do nowej listy dodaj "obiekt" zadwodnika z wyliczonymi rzeczami
 #     lista_osob.append([imie, nazwisko, wzrost*100, waga, round(bmi, 2)])
 
@@ -612,6 +612,69 @@ Wynikowo mają pozostać unikalni zawodnicy.
 #     for osoba in lista_osob:
 #         # konieczna zmiana float na str w locie - bo join() nie umie łączyć inaczej
 #         osoba_str = ";".join( [str(o) for o in osoba] )
-        
+
 #         # zapis konkretnej linii
 #         fp.write(osoba_str+"\n")
+
+
+# słowniki
+
+# slownik = dict()
+# slownik1 = {"klucz": "wartość",
+#            "imie": "jan",
+#            "nazwisko": "nowak",
+#            "wiek": 25}
+# slownik2 = {"klucz": "wartość", "imie": "zdzichu", "nazwisko": "kowalski", "wiek": 50}
+# print(slownik1)
+# print(slownik2)
+
+# slownik = {"klucz": "wartość", "imie": "jan", "nazwisko": "nowak", "wiek": 25,
+#            "klucz": "wartość", "imie": "zdzichu", "nazwisko": "kowalski", "wiek": 50}
+# print(slownik)
+
+
+# slownik = {"klucz": "wartość", "imie": "jan", "nazwisko": "nowak", "wiek": 25}
+# for po całym słowniku - daje klucze
+# for k in slownik:
+#     print(k)
+
+# for po kluczach
+# for k in slownik.keys():
+#     print(k)
+
+# for po wartościach
+# for v in slownik.values():
+#     print(v)
+
+# iterowanie po 2 listach na raz
+# for k,v in zip(slownik.keys(), slownik.values()):
+#     print(f"klucz: {k}\nwartość:{v}\n\n")
+
+# iterowanie po kluczach i wartościach słownika na raz
+# for k, v in slownik.items():
+#     print(f"klucz: {k}\nwartość:{v}\n\n")
+
+
+# print(slownik['imie'])
+# print(slownik["drugie_imie"])
+
+# slownik['drugie_imie'] = "krzysztof"
+# if "drugie_imie" in slownik.keys():
+#     print(slownik["drugie_imie"])
+# else:
+#     print("NIE MA TAKIEGO KLUCZA")
+
+# print(slownik)
+
+# print(slownik.get("drugie_imie", "nie ma takiego numeru"))
+# licznik_slow = {}
+
+# licznik_slow[nowe_slowo] = licznik_slow.get(nowe_slowo, 0) + 1 
+
+
+# ZADANIE
+
+"""
+Policz ile razy występują poszczególne słowa w tekście "Pana Tadeusza".
+Użyj słowników - kluczem niech będzie słowo zapisane małymi literami, a wartością - liczba jego wystąpień.
+"""
