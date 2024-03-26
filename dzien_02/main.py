@@ -97,3 +97,88 @@
 Napisz kod który umieści w liście 10 kolejnych potęg liczby 2.
 Następnie przeiteruj po tej liście i każdy z jej elementów wyświetl na konsoli w osobnej linii.
 """
+
+
+# lista = []
+
+# n = 2
+
+# i = 0
+# while i < 10:
+#     lista.append(n**i)
+#     i = i + 1
+
+# for potega in range(10):
+#     lista.append(n**potega)
+
+
+# for i in range(len(lista)):
+#     print(f"{lista[i]}")
+
+# for i, element in enumerate(lista):
+#     print(f"{lista[i]}")
+
+# for el in lista:
+#     print(el)
+
+
+# list = []
+# element = 2
+# for i in range(10):
+#     list.append(element**i)
+
+# print(list)
+# print(list(range(10)))
+
+# for n in list:
+#     print(n)
+
+
+# lista = [1, 2, 3, 3.14, 2.78, 21.37, "abc", 3, "def"]
+# print(lista)
+
+# lista.clear()
+# print(lista)
+
+# for el in lista:
+#     print("jestem w pętli")
+
+# print("jestem poza pętli")
+
+# # usunięcie z listy pierwszej wartości 3
+# lista.remove(3)
+# print(lista)
+
+# # usunięcie elementu o indeksie 3
+# lista.pop(3)
+# print(lista)
+
+
+# l1 = [1, 2, 3, 4, 5]
+# # l2 = l1.copy()
+# # print(l1, l2)
+# l2 = l1.copy()
+
+# print(l1, l2)
+# l1[1] = "abs"
+
+# print(l1, l2)
+
+
+# sortowanie
+# l1 = [3, 1, 2, 5, 4]
+# l1_s1 = sorted(l1)
+# print(l1, l1_s1)
+
+# l1.sort()
+# print(l1)
+
+# l1 = [3, 1, 2, 5, 4, "abc", "xyz"]
+# l1_s1 = sorted(l1, reverse=True)
+# print(l1, l1_s1)
+
+# l1.sort()
+# print(l1)
+
+
+
