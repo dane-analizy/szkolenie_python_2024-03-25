@@ -545,5 +545,13 @@ Stwórz trzecią krotkę która ma zawierać dane z obu krotek. Trzecią krotkę
 
 #     lista_zawodnikow.append([imie, nazwisko, wzrost, waga, bmi, bmi_comment])
 
-# for el in sorted(lista_zawodnikow, key=lambda o: o[4], reverse=True):
+# for el in sorted(lista_zawodnikow, key=lambda l: l[4], reverse=True):
 #     print(el)
+
+
+# zapisanie listy stringów do pliku
+lista = ["Zenon;Nowak", "Jan;Kowalski", "Andrzej;Gołota", "Julia;Wieniawa"]
+fp = open("plik.txt", "w", encoding="utf-8")
+fp.write("napis\n")
+fp.writelines([f"{el}\n" for el in lista])
+fp.close()
