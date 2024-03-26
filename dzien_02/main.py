@@ -379,3 +379,35 @@ Użyj list składanych, wyświetl obie listy w posortowanej kolejności, od najm
 # ZADANIE
 
 # Dla każdego wpisu w pliku zawodnicy.csv wyświetl na konsoli informację o imieniu, nazwisku, wadze i wzroście oraz BMI.
+# BMI = kg / m2
+
+
+# pierwsza wersja - ELT
+# lista_zawodnikow = [
+#      linia.strip().split(";") for linia in open("zawodnicy.csv", "r", encoding="utf-8")
+# ]
+# # ['Zenon', 'Nowak', '175', '78']
+
+# for osoba in lista_zawodnikow:
+#     wzrost = float(osoba[2])/100
+#     waga = float(osoba[3])
+#     bmi = waga / wzrost**2
+#     print(f"{osoba[0]} {osoba[1]} przy wzroście {wzrost*100:.1f} cm i wadze {waga:.1f} kg ma BMI = {bmi:.2f}")
+
+
+# druga wersja - ETL
+# ['Zenon', 'Nowak', '175', '78']
+# lista_zawodnikow = []
+# for linia in open("zawodnicy.csv", "r", encoding="utf-8"):
+#     osoba = linia.strip().split(";")
+#     imie, nazwisko = osoba[0], osoba[1]
+#     wzrost = float(osoba[2]) / 100
+#     waga = float(osoba[3])
+#     bmi = waga / wzrost**2
+
+#     lista_zawodnikow.append( [imie, nazwisko, wzrost, waga, bmi])
+
+# # print(lista_zawodnikow)
+
+# for osoba in lista_zawodnikow:
+#     print(f"{osoba[0]} {osoba[1]} przy wzroście {osoba[2]*100:.1f} cm i wadze {osoba[3]:.1f} kg ma BMI = {osoba[4]:.2f}")
