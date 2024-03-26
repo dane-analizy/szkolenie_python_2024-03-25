@@ -411,3 +411,31 @@ Użyj list składanych, wyświetl obie listy w posortowanej kolejności, od najm
 
 # for osoba in lista_zawodnikow:
 #     print(f"{osoba[0]} {osoba[1]} przy wzroście {osoba[2]*100:.1f} cm i wadze {osoba[3]:.1f} kg ma BMI = {osoba[4]:.2f}")
+
+
+# krotka = ("Zenon", "Nowak", "175", "78")
+# # print(krotka)
+# # # krotka.append(15)
+# # print(sorted(krotka))
+
+# lista_z_krotki = list(krotka)
+# print(lista_z_krotki)
+
+# lista = [1,2,3, "abc", "zxy"]
+# krotka_z_listy = tuple(lista)
+# print(krotka_z_listy)
+
+# k1 = tuple( [i for i in range(10)] )
+# print(k1)
+
+# k2 = tuple([i for i in range(10, 20)])
+# print(k2)
+
+# print(k2 + k1)
+
+# ZADANIE
+
+"""
+Stwórz dwie krotki. Jedna ma zawierać 10 losowych liczb zakresu 1-10, druga 10 losowych liczb zakresu 11-20.
+Stwórz trzecią krotkę która ma zawierać dane z obu krotek. Trzecią krotkę wypisz na konsoli.
+"""
