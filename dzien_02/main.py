@@ -317,14 +317,27 @@ Użyj list składanych, wyświetl obie listy w posortowanej kolejności, od najm
 # print(lista_pelna)
 
 
-linia_csv_kowalski = "Jan;Kowalski;185;67"
-linia_csv_nowak = "Zenon;Nowak;175;78"
+# linia_csv_kowalski = "Jan;Kowalski;185;67"
+# linia_csv_nowak = "Zenon;Nowak;175;78"
 
-linia_rozdzielona = [linia_csv_kowalski, linia_csv_nowak]
+# linia_rozdzielona = [linia_csv_kowalski, linia_csv_nowak]
 
-print(linia_rozdzielona[1])
+# print(linia_rozdzielona[1])
 
-kowalski = linia_csv_kowalski.split(";")
-print(kowalski)
+# kowalski = linia_csv_kowalski.split(";")
+# print(kowalski)
 
-print(",".join(kowalski))
+# print(",".join(kowalski))
+
+
+# linia_csv_kowalski = "Jan;Kowalski;185;67"
+# linia_csv_nowak = "Zenon;Nowak;175;78"
+
+# linia_rozdzielona = [linia_csv_kowalski.split(";"),
+#                      linia_csv_nowak.split(";")]
+
+# print(linia_rozdzielona)
+
+
+# ZADANIE
+# Załaduj do postaci listy list zawartość pliku data.csv
