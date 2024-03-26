@@ -555,3 +555,8 @@ fp = open("plik.txt", "w", encoding="utf-8")
 fp.write("napis\n")
 fp.writelines([f"{el}\n" for el in lista])
 fp.close()
+
+
+# ZADANIE
+
+# Przepisz tylko unikalne osoby z pliku zawodnicy.csv do nowego pliku - zawodnicy_unikalni.csv
