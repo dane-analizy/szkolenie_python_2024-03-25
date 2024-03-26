@@ -28,9 +28,12 @@
 
 # print(type([1,2]))
 
+
+# zdefiniowanie listy
 lista = [1, 2, 3, 3.14, 2.78, 21.37, "abc", "def"]
 print(lista)
 print(type(lista))
 
+# wyswietlenie typów kolejnych elementów na liście
 for element in lista:
     print(element, type(element))
