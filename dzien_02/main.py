@@ -439,3 +439,25 @@ Użyj list składanych, wyświetl obie listy w posortowanej kolejności, od najm
 Stwórz dwie krotki. Jedna ma zawierać 10 losowych liczb zakresu 1-10, druga 10 losowych liczb zakresu 11-20.
 Stwórz trzecią krotkę która ma zawierać dane z obu krotek. Trzecią krotkę wypisz na konsoli.
 """
+
+# import random
+
+# krotka_1_10 = tuple([random.randint(1, 10) for _ in range(10)])
+# krotka_11_20 = tuple([random.randint(11, 20) for _ in range(10)])
+# krotka_1_20 = krotka_1_10 + krotka_11_20
+# print(krotka_1_20)
+
+
+# lista = [1, 3, 2, 1, 2, 1, 2, 3]
+# print(lista)
+# print(set(lista))
+
+# print("-" * 80)
+# krotka = (1, 2, 1, 2, 1, 2, 3)
+# print(krotka)
+# print(set(krotka))
+
+
+# ZADANIE
+
+# Wygeneruj zestaw niepowtarzalnych liczb przy 100-krotnym losowaniu liczby z zakresu 1-50
