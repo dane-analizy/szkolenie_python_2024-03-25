@@ -679,9 +679,57 @@ Policz ile razy występują poszczególne słowa w tekście "Pana Tadeusza".
 Użyj słowników - kluczem niech będzie słowo zapisane małymi literami, a wartością - liczba jego wystąpień.
 """
 
-# wczytać cały plik open().read()
-# zamienić tekst na małe litery
-# zbudować pusty słownik
-# podzielić tekst na słowa split()
-# przejść słowo po słowie i dodać w słowniku odpowiednią liczbę
-# licznik_slow[nowe_slowo] = licznik_slow.get(nowe_slowo, 0) + 1
+# # wczytać cały plik open().read()
+# tekst = open("pan-tadeusz.txt", "r", encoding="utf-8").read()
+
+# # zamienić tekst na małe litery
+# # moźe usunąć jakieś dodatkowe znaki - ., \n ? !
+# tekst = tekst.lower()
+
+# zle_znaki = '.,?!\n'
+# for zz in zle_znaki:
+#     tekst = tekst.replace(zz, " ")
+
+# # podzielić tekst na słowa split()
+# slowa = tekst.split(" ")
+
+# # zbudować pusty słownik
+# licznik_slow = {}
+
+# # przejść słowo po słowie i dodać w słowniku odpowiednią liczbę
+# for nowe_slowo in slowa:
+#     # czyste_nowe_slowo = lematyzuj(nowe_slowo)
+#     if len(nowe_slowo) <=5:
+#         continue
+#     licznik_slow[nowe_slowo] = licznik_slow.get(nowe_slowo, 0) + 1
+
+# print(licznik_slow.get("tadeusz"))
+
+# # print(licznik_slow)
+
+# posortowany_slownik = sorted(licznik_slow.items(), key=lambda l: l[1])
+# print(posortowany_slownik)
+
+
+# d = {
+#     "imie": "jan",
+#     "nazwisko": "kowalski",
+#     "wiek": 25,
+#     "samochody": [
+#         {"marka": "Ford", "model": "Focus", "rok_produkcji": 2020},
+#         {"marka": "Opel", "model": "Astra", "rok_produkcji": 2018},
+#     ],
+#     "dlugosc_palcow_lewa_reka": [3, 5, 6, 5,4]
+# }
+# # print(d)
+
+# # print(d['wiek'])
+
+# print(len(d["dlugosc_palcow_lewa_reka"]))
+
+# d["dlugosc_palcow_lewa_reka"].append("jest ok")
+
+# print(d["dlugosc_palcow_lewa_reka"][-1])
+
+
+# print(d["samochody"][0]['model'])
