@@ -25,3 +25,12 @@
 # for linia in open(nazwa_pliku, "r", encoding="utf-8"):
 #     if len(linia.strip()) > 0 and linia[0] != '#':
 #         print(linia.rstrip())
+
+# print(type([1,2]))
+
+lista = [1, 2, 3, 3.14, 2.78, 21.37, "abc", "def"]
+print(lista)
+print(type(lista))
+
+for element in lista:
+    print(element, type(element))
