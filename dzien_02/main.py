@@ -480,8 +480,70 @@ Stwórz trzecią krotkę która ma zawierać dane z obu krotek. Trzecią krotkę
 # print(z1.difference(z2))  # różnica zbiorów z1 i z2
 # print(z2.difference(z1))  # różnica zbiorów z2 i z1
 
-# print(z1.difference(z2).union(z2.difference(z1))) 
+# print(z1.difference(z2).union(z2.difference(z1)))
 
 
 # ZADANIE
 # Wypisz na ekranie listę unikalnych zawodników z zawodnicy.csv. Każda z osób ma być elementem typu tuple/krotka.
+
+
+# lista_zawodnikow = []
+# for linia in open("zawodnicy.csv", "r", encoding="utf-8"):
+#     osoba = linia.strip().split(";")
+#     imie, nazwisko = osoba[0], osoba[1]
+#     wzrost = float(osoba[2]) / 100
+#     waga = float(osoba[3])
+#     bmi = waga / wzrost**2
+
+#     lista_zawodnikow.append( [imie, nazwisko, wzrost, waga, bmi])
+
+# # to nie zadziała:
+# set(lista_zawodnikow)
+
+# to zadziała:
+# lista_zawodnikow = [linia.strip() for linia in open("zawodnicy.csv", "r", encoding="utf-8")]
+# print(len(lista_zawodnikow))
+
+# lista_zawodnikow = set(lista_zawodnikow)
+# print(len(lista_zawodnikow))
+# print(lista_zawodnikow)
+
+# for wiersz in lista_zawodnikow:
+#     osoba = wiersz.split(";")
+#     wzrost = float(osoba[2])/100
+#     waga = float(osoba[3])
+#     bmi = waga / wzrost**2
+#     print(f"{osoba[0]} {osoba[1]} przy wzroście {wzrost*100:.1f} cm i wadze {waga:.1f} kg ma BMI = {bmi:.2f}")
+
+
+# sortowanie listy list
+
+# lista_zawodnikow = []
+# for linia in open("zawodnicy.csv", "r", encoding="utf-8"):
+#     osoba = linia.strip().split(";")
+#     imie, nazwisko = osoba[0], osoba[1]
+#     wzrost = float(osoba[2]) / 100
+#     waga = float(osoba[3])
+#     bmi = waga / wzrost**2
+
+#     if bmi <= 16:
+#         bmi_comment = "wygłodzenie"
+#     elif bmi <= 17:
+#         bmi_comment = "wychudzenie"
+#     elif bmi <= 18.5:
+#         bmi_comment = "niedowaga"
+#     elif bmi <= 25:
+#         bmi_comment = "pożądana masa ciała"
+#     elif bmi <= 30:
+#         bmi_comment = "nadwaga"
+#     elif bmi <= 35:
+#         bmi_comment = "otyłość I stopnia"
+#     elif bmi <= 40:
+#         bmi_comment = "otyłość II stopnia (duża)"
+#     else:
+#         bmi_comment = "otyłość III stopnia (chorobliwa)"
+
+#     lista_zawodnikow.append([imie, nazwisko, wzrost, waga, bmi, bmi_comment])
+
+# for el in sorted(lista_zawodnikow, key=lambda o: o[4], reverse=True):
+#     print(el)
