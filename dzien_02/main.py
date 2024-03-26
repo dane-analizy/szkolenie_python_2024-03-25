@@ -180,5 +180,24 @@ Następnie przeiteruj po tej liście i każdy z jej elementów wyświetl na kons
 # l1.sort()
 # print(l1)
 
+# # importowawanie całego modułu
+# import random
+# random.randint()
 
+# # importowanie jednej funkcji z pakietu
+# from random import randint
+# randint()
+
+
+import random
+
+print(random.randint(1, 100))
+
+
+# ZADANIE
+
+"""
+Wygeneruj listę 10 losowych liczb z zakresu 1-100.
+Posortuj je w kolejności malejącej, a następnie wyświetl każdą liczbę w oddzielnej linii.
+"""
 
