@@ -235,13 +235,13 @@ Posortuj je w kolejności malejącej, a następnie wyświetl każdą liczbę w o
 
 
 # list comprehention / listy składane
-import random
+# import random
 
-# lista = [random.randint(1, 100) for _ in range(10)]
-lista = [i for i in range(10)]
+# # lista = [random.randint(1, 100) for _ in range(10)]
+# lista = [i for i in range(10)]
 
-for el in sorted(lista, reverse=True):
-     print(el)
+# for el in sorted(lista, reverse=True):
+#      print(el)
 
 
 # ZADANIE
@@ -249,4 +249,43 @@ for el in sorted(lista, reverse=True):
 """
 Korzystając z list składanych wygeneruj listę 10 kolejnych potęg dwójki.
 Wyświetl tę listę. Spróbuj zrobić to w jak najkrótszym zapisie.
+"""
+
+# lista = [2**potega for potega in range(10)]
+# print(lista)
+
+
+# liczby_parzyste = []
+# liczby_nieparzyste = []
+# for liczba in range(50):
+#     if liczba % 2:
+#         liczby_nieparzyste.append(liczba)
+#     else:
+#         liczby_parzyste.append(liczba)
+
+
+# print(liczby_parzyste)
+# print(liczby_nieparzyste)
+
+# liczby_parzyste = [liczba for liczba in range(50) if not liczba % 2]
+# liczby_nieparzyste = [liczba for liczba in range(50) if liczba % 2]
+# print(liczby_parzyste)
+# print(liczby_nieparzyste)
+
+
+# a = 130
+# b = "parzysta" if a % 2 == 0 else "nieparzysta"
+# print(a, b)
+
+# if a % 2 == 0:
+#     b = "parzysta"
+# else:
+#     b = "nieparzysta"
+
+
+# ZADANIE
+
+"""
+Wygeneruj dwie listy liczb losowych - losowe parzyste i losowe nieparzyste.
+Użyj list składanych, wyświetl obie listy w posortowanej.
 """
