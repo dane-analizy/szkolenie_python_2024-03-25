@@ -287,5 +287,44 @@ Wyświetl tę listę. Spróbuj zrobić to w jak najkrótszym zapisie.
 
 """
 Wygeneruj dwie listy liczb losowych - losowe parzyste i losowe nieparzyste.
-Użyj list składanych, wyświetl obie listy w posortowanej.
+Użyj list składanych, wyświetl obie listy w posortowanej kolejności, od najmniejszej do największej.
 """
+
+
+# import random
+
+# liczby_parzyste = [i if random.randint(1, 100) % 2 == 0  else "pass" for i in range(50)]
+# liczby_nieparzyste = [i if random.randint(1, 100) % 2 else "pass" for i in range(50)]
+
+# print(liczby_parzyste)
+# print(liczby_nieparzyste)
+
+
+# import random
+
+# liczby_parzyste = [i for i in range(50) if not i % 2]
+# liczby_nieparzyste = [i for i in range(50) if i % 2]
+
+# print(liczby_parzyste)
+# print(liczby_nieparzyste)
+
+
+# lista_pelna = liczby_nieparzyste + liczby_parzyste
+
+# lista_pelna = liczby_nieparzyste.copy()
+# lista_pelna.extend(liczby_parzyste)
+
+# print(lista_pelna)
+
+
+linia_csv_kowalski = "Jan;Kowalski;185;67"
+linia_csv_nowak = "Zenon;Nowak;175;78"
+
+linia_rozdzielona = [linia_csv_kowalski, linia_csv_nowak]
+
+print(linia_rozdzielona[1])
+
+kowalski = linia_csv_kowalski.split(";")
+print(kowalski)
+
+print(",".join(kowalski))
