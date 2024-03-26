@@ -369,8 +369,13 @@ Użyj list składanych, wyświetl obie listy w posortowanej kolejności, od najm
 
 
 # optymalizacja 3 - list comprehention
-lista_zawodnikow = [
-    linia.strip().split(";") for linia in open("zawodnicy.csv", "r", encoding="utf-8")
-]
+# lista_zawodnikow = [
+#     linia.strip().split(";") for linia in open("zawodnicy.csv", "r", encoding="utf-8")
+# ]
 
-print(lista_zawodnikow)
+# print(lista_zawodnikow)
+
+
+# ZADANIE
+
+# Dla każdego wpisu w pliku zawodnicy.csv wyświetl na konsoli informację o imieniu, nazwisku, wadze i wzroście oraz BMI.
