@@ -550,13 +550,26 @@ Stwórz trzecią krotkę która ma zawierać dane z obu krotek. Trzecią krotkę
 
 
 # zapisanie listy stringów do pliku
-lista = ["Zenon;Nowak", "Jan;Kowalski", "Andrzej;Gołota", "Julia;Wieniawa"]
-fp = open("plik.txt", "w", encoding="utf-8")
-fp.write("napis\n")
-fp.writelines([f"{el}\n" for el in lista])
-fp.close()
+# lista = ["Zenon;Nowak", "Jan;Kowalski", "Andrzej;Gołota", "Julia;Wieniawa"]
+# fp = open("plik.txt", "w", encoding="utf-8")
+# fp.write("napis\n")
+# fp.writelines([f"{el}\n" for el in lista])
+# fp.close()
 
 
 # ZADANIE
 
 # Przepisz tylko unikalne osoby z pliku zawodnicy.csv do nowego pliku - zawodnicy_unikalni.csv
+# Jeśli chcesz to posortuj po pierwszej literze imienia dane w pliku wynikowym.
+
+# # wczytujemy plik do listy stringów
+# with open("zawodnicy.csv", "r", encoding="utf-8") as fp:
+#     lista_zawodnikow = fp.readlines()
+
+# # unikalne i posortowane
+# lista_zawodnikow = set(lista_zawodnikow)
+# lista_zawodnikow = sorted(lista_zawodnikow)
+
+# # zapisujemy
+# with open("zawodnicy_unikalni.csv", "w", encoding="utf-8") as fp:
+#     fp.writelines(lista_zawodnikow)
