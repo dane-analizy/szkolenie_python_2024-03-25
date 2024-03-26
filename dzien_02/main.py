@@ -340,4 +340,37 @@ Użyj list składanych, wyświetl obie listy w posortowanej kolejności, od najm
 
 
 # ZADANIE
-# Załaduj do postaci listy list zawartość pliku data.csv
+# Załaduj do postaci listy list zawartość pliku zawodnicy.csv
+
+# lista_zawodnikow = []
+# for linia in open("zawodnicy.csv", "r", encoding="utf-8"):
+#     linia_oczyszczona = linia.strip()
+#     linia_rozdzielona = linia_oczyszczona.split(";")
+#     lista_zawodnikow.append(linia_rozdzielona)
+
+# print(lista_zawodnikow)
+
+
+# optymalizacja 1
+# lista_zawodnikow = []
+# for linia in open("zawodnicy.csv", "r", encoding="utf-8"):
+#     linia_rozdzielona = linia.strip().split(";")
+#     lista_zawodnikow.append(linia_rozdzielona)
+
+# print(lista_zawodnikow)
+
+
+# optymalizacja 2
+# lista_zawodnikow = []
+# for linia in open("zawodnicy.csv", "r", encoding="utf-8"):
+#     lista_zawodnikow.append(linia.strip().split(";"))
+
+# print(lista_zawodnikow)
+
+
+# optymalizacja 3 - list comprehention
+lista_zawodnikow = [
+    linia.strip().split(";") for linia in open("zawodnicy.csv", "r", encoding="utf-8")
+]
+
+print(lista_zawodnikow)
