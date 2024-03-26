@@ -573,3 +573,45 @@ Stwórz trzecią krotkę która ma zawierać dane z obu krotek. Trzecią krotkę
 # # zapisujemy
 # with open("zawodnicy_unikalni.csv", "w", encoding="utf-8") as fp:
 #     fp.writelines(lista_zawodnikow)
+
+
+# ZADANIE
+
+"""
+Dane z pliku zawodnicy.csv wzbogacone o wyliczony wskaźnik BMI zapisz do pliku zawodnicy_bmi.csv.
+Wynikowo mają pozostać unikalni zawodnicy.
+"""
+
+# wczytanie wierszy
+# with open("zawodnicy.csv", "r", encoding="utf-8") as fp:
+#     lista_zawodnikow = fp.readlines()
+
+# # unikalne
+# lista_zawodnikow = set(lista_zawodnikow)
+
+# # dla wszystkich zawodników na liście:
+# lista_osob = []
+# for linia in lista_zawodnikow:
+#     # czyszczenie danych (rozdzielanie, zamiana na float)
+#     osoba = linia.strip().split(";")
+#     imie, nazwisko = osoba[0], osoba[1]
+#     wzrost = float(osoba[2]) / 100
+#     waga = float(osoba[3])
+    
+#     # wyliczenie BMI
+#     bmi = waga / wzrost**2
+    
+#     # do nowej listy dodaj "obiekt" zadwodnika z wyliczonymi rzeczami
+#     lista_osob.append([imie, nazwisko, wzrost*100, waga, round(bmi, 2)])
+
+# # sortowanie po 2-elemencie (wzrost)
+# lista_osob.sort(key=lambda l:l[2])
+
+# # zapis do pliku
+# with open("zawodnicy_bmi.csv", "w", encoding="utf-8") as fp:
+#     for osoba in lista_osob:
+#         # konieczna zmiana float na str w locie - bo join() nie umie łączyć inaczej
+#         osoba_str = ";".join( [str(o) for o in osoba] )
+        
+#         # zapis konkretnej linii
+#         fp.write(osoba_str+"\n")
