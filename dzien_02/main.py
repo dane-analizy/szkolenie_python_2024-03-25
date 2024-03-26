@@ -481,3 +481,7 @@ Stwórz trzecią krotkę która ma zawierać dane z obu krotek. Trzecią krotkę
 # print(z2.difference(z1))  # różnica zbiorów z2 i z1
 
 # print(z1.difference(z2).union(z2.difference(z1))) 
+
+
+# ZADANIE
+# Wypisz na ekranie listę unikalnych zawodników z zawodnicy.csv. Każda z osób ma być elementem typu tuple/krotka.
