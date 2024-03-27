@@ -319,6 +319,35 @@ Wyświetl wynik zwrócony przez funkcję.
 """
 
 
+# wersja rozbudowana
+# def czytaj_plik(nazwa_pliku, kodowanie = "utf-8"):
+
+#     with open(nazwa_pliku, "r", encoding=kodowanie) as fp:
+#         dane = fp.readlines()
+
+#     dane = set(dane)
+#     zawodnicy = []
+#     for wiersz in dane:
+#         zawodnicy.append( wiersz.strip().split(";"))
+
+#     return zawodnicy
+
+# dane_z_pliku = czytaj_plik("zawodnicy.csv")
+# print(dane_z_pliku)
+
+
+# wersja pythonic-style
+# def czytaj_plik(nazwa_pliku, kodowanie="utf-8"):
+
+#     with open(nazwa_pliku, "r", encoding=kodowanie) as fp:
+#         dane = fp.readlines()
+
+#     return [wiersz.strip().split(";") for wiersz in set(dane)]
+
+# dane_z_pliku = czytaj_plik("zawodnicy.csv")
+# print(dane_z_pliku)
+
+
 
 
 # argumenty args i kwargs
