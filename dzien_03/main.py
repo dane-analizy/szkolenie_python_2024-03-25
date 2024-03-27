@@ -619,22 +619,52 @@ BMI = kg/m2
 # print(policz_bmi(80, 0))
 
 
-# moduły: plik i obliczenia
-
+# moduły = pliki z kodem w pythonie, dołączane przez import
 
 
 # ZADANIE
 
 """
 NA podstawie szczątków kodu i przygotowanych wcześniej funkcji  napisz resztę - wczytaj dane z pliku do listy słowników,
-a potem dla każego rekordu wylicz BMI i wyświelt razem z imieniem i nazwiskiem
+a potem dla każdego rekordu wylicz BMI i wyświetl razem z imieniem i nazwiskiem
 """
-import narzedzia
 
-dane = narzedzia.czytaj_plik_do_slownika("zawodnicy.csv")
+# # import narzedzia
+# # dane = narzedzia.czytaj_plik_do_slownika("zawodnicy.csv")
+
+# from narzedzia import czytaj_plik_do_slownika, policz_bmi
+
+# dane = czytaj_plik_do_slownika("zawodnicy.csv")
+
+# # iteracja po dane
+# for osoba in dane:
+#     bmi = policz_bmi(osoba["waga"], osoba["wzrost"])
+#     print(f'{osoba["imie"]} {osoba["nazwisko"]} ma współczynnik BMI = {bmi}')
 
 
-# iteracja po dane
-....
-.. = narzedzia.policz_bmi(..., ...)
-print(....)
+# uwaga na importy
+# import narzedzia
+
+# dane = narzedzia.czytaj_plik_do_slownika("zawodnicy.csv")
+
+# # iteracja po dane
+# for osoba in dane:
+#     bmi = narzedzia.policz_bmi(osoba["waga"], osoba["wzrost"])
+#     print(f'{osoba["imie"]} {osoba["nazwisko"]} ma współczynnik BMI = {bmi}')
+
+
+# print(narzedzia.zmienna_narzedzia)
+
+
+# from narzedzia import czytaj_plik_do_slownika, policz_bmi
+
+# dane = czytaj_plik_do_slownika("zawodnicy.csv")
+# # narzedzia.czytaj_plik_do_listy_tupli()
+
+# # iteracja po dane
+# for osoba in dane:
+#     bmi = policz_bmi(osoba["waga"], osoba["wzrost"])
+#     print(f'{osoba["imie"]} {osoba["nazwisko"]} ma współczynnik BMI = {bmi}')
+
+
+# print(__name__)
