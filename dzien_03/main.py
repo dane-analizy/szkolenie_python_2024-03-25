@@ -91,6 +91,9 @@ Niech program zapyta o imię 2 razy i wywoła 2 razy przygotowaną funkcję.
 # pozdrow("Łukasz", miasto="Warszawa", wiek=35)
 
 
+
+# funkcje wywołują inne funkcje, wykorzystujemy zwracanie wartości przez return
+
 # def przygotuj_pozdrowienie(imie, wiek, miasto):
 #     pozdrowienie = f"Cześć {imie}! Widzę, że masz {wiek} lat i mieszkasz w {miasto}"
 #     return pozdrowienie
@@ -117,6 +120,8 @@ Niech program zapyta o imię 2 razy i wywoła 2 razy przygotowaną funkcję.
 # pozdrow_w_kawalkach("Ania", 25, "Kraków")
 
 
+# wiele returnów
+
 # def dzialanie(typ_dzialania, liczba_a, liczba_b):
 #     if typ_dzialania == "dodawanie":
 #         wynik = liczba_a + liczba_b
@@ -125,7 +130,7 @@ Niech program zapyta o imię 2 razy i wywoła 2 razy przygotowaną funkcję.
 #     else:
 #         print("Nie znam tego działania")
 #         wynik = None
-    
+
 #     print("skończyłem i zwracam wynik")
 #     return wynik
 
@@ -141,11 +146,22 @@ Niech program zapyta o imię 2 razy i wywoła 2 razy przygotowaną funkcję.
 # print(wynik_dzialania)
 
 
-# ZADADANIE
+# ZADANIE
 """
 Napisz funkcję, która zwraca wartości:
      - -1 jeśli podana w parametrze liczba jest ujemna
-     - +1 jesli liczba jest dodatnia
+     - +1 jesli podana w parametrze liczba jest dodatnia
      - 0 jeśli liczba z parametru jest zerem 
 Wynik, który zwróci funkcja wypisz na ekranie
 """
+
+
+
+# isinstance
+
+# argumenty domyślne
+
+# argumenty args i kwargs
+
+
+# wyjątki - raise
