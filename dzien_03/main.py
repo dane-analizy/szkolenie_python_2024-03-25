@@ -412,18 +412,20 @@ Zwracana ma być lista krotek.
 
 # repozytorium z pakietami - https://pypi.org/
 
+# dokumentacja Faker https://faker.readthedocs.io/en/master/providers.html
 
+
+# import i użycie:
+
+# importujemy cały pakiet i z niego używamy klasy
 # import faker
-
 # f = faker.Faker()
 
-
+# albo: importujemy tylko klasę z pakietu (from ... import ...)
 # from faker import Faker
-
 # f = Faker("pl")
 
 # print(f.street_name())
-
 # print(f.address())
 
 
