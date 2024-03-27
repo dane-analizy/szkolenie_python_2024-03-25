@@ -774,3 +774,16 @@ Wcześniej zdefiniuj klasę - niech ma atrybuty:
 oraz metodę __repr__.
 Po stworzeniu obiektu użyj na nim print()
 """
+
+# from models.zawodnik import Zawodnik
+# from utils.file import czytaj_plik_do_slownika
+
+# dane = czytaj_plik_do_slownika("zawodnicy.csv")
+
+# lista_zawodnikow = [
+#     Zawodnik(o['imie'], o['wzrost'])
+#     for o in dane
+# ]
+
+# for z in lista_zawodnikow:
+#     print(z)
