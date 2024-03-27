@@ -504,10 +504,62 @@ Zapisz te osoby do pliku CSV, gdzie kolumny rozdzielone są ";"
 #     json.dump(spoleczenstwo, fp)
 
 
-
-
 # pandas - czytanie csv / excela + iterrows() + dict z df
 # pip install pandas openpyxl
+
+# import pandas as pd
+# data = pd.read_csv("zawodnicy.csv",
+#                    sep=";",
+#                    header=None,
+#                    names=['imie', 'nazwisko', 'wzrost', 'waga'])
+# print(data)
+
+# data.to_excel("zawodnicy.xlsx", index=False)
+
+
+# import pandas as pd
+
+# data = pd.read_excel("file_example_XLS_5000.xls")
+# print(data)
+
+
+# import pandas as pd
+
+# # wczytanie csv z nazwaniem kolumn
+# data = pd.read_csv("zawodnicy.csv",
+#                    sep=";",
+#                    header=None,
+#                    names=['imie', 'nazwisko', 'wzrost', 'waga'])
+
+# przerzucenie DataFrame na listę słowników
+# data_dict = data.to_dict(orient="records")
+# print(data_dict)
+
+# # kolumna "nazwisko" dla rekordu o indeksie 5
+# print(data_dict[5]['nazwisko'])
+
+# # wyświetlenie 2 kolumn z listy słowników
+# for osoba in data_dict:
+#     print(osoba['imie'], osoba['waga'])
+
+# df = pd.DataFrame(data_dict)
+# print(df)
+
+
+# lista_dictow = [
+#     {"imie": "Jan", "nazwisko": "Mowak"},
+#     {"wiek": 35, "rozmiar_buta": 40, "imie": "Zenon"},
+#     {"wiek": 35, "rozmiar_buta": 40, "imie": "Zenon"},
+# ]
+# df = pd.DataFrame(lista_dictow)
+# print(df)
+
+
+# szkolenie z Pandasem w roli głównej https://jsystems.pl/szkolenia-python;analiza_danych_w_jezyku_python.szczegoly
+
+
+
+
 
 
 # funkcje: czytanie z pliku, liczenie bmi
