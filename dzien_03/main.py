@@ -347,7 +347,12 @@ Wyświetl wynik zwrócony przez funkcję.
 # dane_z_pliku = czytaj_plik("zawodnicy.csv")
 # print(dane_z_pliku)
 
-
+# ZADANIE
+"""
+Przerób rozwiązanie poprzedniego ćwiczenia w taki sposób, by rozdzielacz tez był podany przez argument funkcji,
+a w przypadku jego niepodania przyjmował ";".
+Zwracana ma być lista krotek.
+"""
 
 
 # argumenty args i kwargs
