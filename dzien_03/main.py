@@ -191,14 +191,105 @@ Wynik, który zwróci funkcja wypisz na ekranie
 #     print(wynik)
 # except Exception as e:
 #     print(e)
-    
+
 # print("Skonczyułem")
 
-# isinstance
+
+# isinstance - porównanie czy zmienna jest danego typu
+
+# liczba = 12.3
+# lista = [123,1241]
+
+# # print(type(liczba))
+# # print(type(lista))
+
+# if isinstance(liczba, (int, float) ):
+#     print("Zmienna liczba jest typu int albo float")
+# else:
+#     print("Zmienna liczba NIE jest typu int")
+
+
+# wersja ze sprawdzaniem typu argumentu
+# def jaka_liczba(liczba):
+#     # sprawdzamy czy w ogóle mamy do czyniena z liczbą
+#     if not isinstance(liczba, (int, float)):
+#         print("Zły typ argumentu - musi być int albo float")
+#         return None
+
+#     # w tym miejscy mamy liczbę - sprawdzamy jak się ona ma do zera
+#     if liczba < 0:
+#         wynik = "-1"
+#     elif liczba > 0:
+#         wynik = "+1"
+#     else:
+#         wynik = "0"
+
+#     return wynik
+
+
+# testowe_wartosci = [-5, 5.5, 0, "ala ma kota"]
+# for test in testowe_wartosci:
+#     print(f"Testuję: {test=}")
+#     moja_liczba = jaka_liczba(test)
+
+#     if moja_liczba:
+#         print(f"Wynik: {moja_liczba=}", end="\n\n")
+#     else:
+#         print("Funkcja zwróciła None")
+
+
+# # wersja z podnoszeniem wyjątku
+# def jaka_liczba(liczba):
+#     # sprawdzamy czy w ogóle mamy do czyniena z liczbą
+#     if not isinstance(liczba, (int, float)):
+#         print("Zły typ argumentu - musi być int albo float")
+#         raise TypeError("To nie jest dobry typ")
+#         return None
+
+#     if liczba == 0:
+#         raise ValueError("nie można dzielić przez zero")
+
+#     # w tym miejscy mamy liczbę - sprawdzamy jak się ona ma do zera
+#     if liczba < 0:
+#         wynik = "-1"
+#     elif liczba > 0:
+#         wynik = "+1"
+#     else:
+#         wynik = "0"
+
+#     return wynik
+
+
+# testowe_wartosci = [-5, 5.5, 0, "ala ma kota"]
+# for test in testowe_wartosci:
+#     print(f"Testuję: {test=}")
+#     try:
+#         moja_liczba = jaka_liczba(test)
+#     # except Exception as e:
+#     #     print(e)
+#     #     continue
+#     except ValueError as e:
+#         print("obsługa wyjątku ValueError")
+#         print(e)
+#         continue
+#     except TypeError as e:
+#         print("obsługa wyjątku TypeError")
+#         print(e)
+#         continue
+#     except Exception as e:
+#         print("obsługa pozostałych wyjątków")
+#         print(e)
+#         continue
+
+#     if moja_liczba:
+#         print(f"Wynik: {moja_liczba=}", end="\n\n")
+#     else:
+#         print("Funkcja zwróciła None")
+
+# print("Koniec programu")
 
 # argumenty domyślne
 
 # argumenty args i kwargs
 
-
-# wyjątki - raise
+# Faker
