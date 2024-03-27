@@ -91,7 +91,6 @@ Niech program zapyta o imię 2 razy i wywoła 2 razy przygotowaną funkcję.
 # pozdrow("Łukasz", miasto="Warszawa", wiek=35)
 
 
-
 # funkcje wywołują inne funkcje, wykorzystujemy zwracanie wartości przez return
 
 # def przygotuj_pozdrowienie(imie, wiek, miasto):
@@ -156,6 +155,44 @@ Wynik, który zwróci funkcja wypisz na ekranie
 """
 
 
+# def jaka_liczba(liczba):
+#     # sprawdzamy czy w ogóle mamy do czyniena z liczbą
+#     try:
+#         liczba_do_porownania = float(liczba)
+#     except:
+#         # to nie liczbza - mówimy o błędzie i wychodzimy z None
+#         print(f"Nie umiem porównywać z zerem {liczba=}")
+#         return None
+
+#     # w tym miejscy mamy liczbę - sprawdzamy jak się ona ma do zera
+#     if liczba_do_porownania < 0:
+#         wynik = "-1"
+#     elif liczba_do_porownania > 0:
+#         wynik = "+1"
+#     else:
+#         wynik = "0"
+
+#     return wynik
+
+
+# testowe_wartosci = [-5, 5, 0, "ala ma kota"]
+# for test in testowe_wartosci:
+#     print(f"Testuję: {test=}")
+#     moja_liczba = jaka_liczba(test)
+#     print(f"Wynik: {moja_liczba=}", end="\n\n")
+
+
+# wiele operacji w try
+
+# wartosc = "0" # spróbuj z "-1", "1", "ala ma kota"
+# try:
+#     liczba = float(wartosc)
+#     wynik = 1/liczba
+#     print(wynik)
+# except Exception as e:
+#     print(e)
+    
+# print("Skonczyułem")
 
 # isinstance
 
