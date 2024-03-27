@@ -557,10 +557,40 @@ Zapisz te osoby do pliku CSV, gdzie kolumny rozdzielone są ";"
 
 # szkolenie z Pandasem w roli głównej https://jsystems.pl/szkolenia-python;analiza_danych_w_jezyku_python.szczegoly
 
+# ZADANIE
+"""
+Napisz funkcję która zwróci pod postacią listy SŁOWNIKÓW zawartość pliku CSV którego nazwę przekażemy przez pierwszy argument funkcji.
+Plik ma być otwarty z kodowaniem podanym jako drugi argument funkcji. Trzecim argumentem jest separator.
+Jeśli kodowanie nie zostanie podane ma przyjąć utf-8. Domyślny separator to ";".
+Zwracamy wszystkie wiersze z pliku, nie usuwamy duplikatów.
+"""
+
+# czytanie z pliku do listy słowników
+
+# DRY - Don't Repeat Yourself
+
+def czytaj_plik_do_listy_tupli(nazwa_pliku, kodowanie="utf-8", separator=";"):
+    with open(nazwa_pliku, "r", encoding=kodowanie) as fp:
+        dane = fp.readlines()
+    return [tuple(wiersz.strip().split(separator)) for wiersz in dane]
 
 
+def czytaj_plik_do_slownika(nazwa_pliku, kodowanie="utf-8", separator=";"):
+    dane_z_pliku = czytaj_plik_do_listy_tupli(nazwa_pliku, kodowanie, separator)
+    lista_wyjsciowa = [
+        {
+            "imie": osoba[0],
+            "nazwisko": osoba[1],
+            "wzrost": float(osoba[2]),
+            "waga": float(osoba[3])
+        }
+        for osoba in dane_z_pliku
+    ]
+    return lista_wyjsciowa
 
 
+zawodnicy = czytaj_plik_do_slownika("zawodnicy.csv")
+print(zawodnicy)
 
 # funkcje: czytanie z pliku, liczenie bmi
 # moduły: plik i obliczenia
