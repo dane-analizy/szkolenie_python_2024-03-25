@@ -569,28 +569,38 @@ Zwracamy wszystkie wiersze z pliku, nie usuwamy duplikatów.
 
 # DRY - Don't Repeat Yourself
 
-def czytaj_plik_do_listy_tupli(nazwa_pliku, kodowanie="utf-8", separator=";"):
-    with open(nazwa_pliku, "r", encoding=kodowanie) as fp:
-        dane = fp.readlines()
-    return [tuple(wiersz.strip().split(separator)) for wiersz in dane]
+# def czytaj_plik_do_listy_tupli(nazwa_pliku, kodowanie="utf-8", separator=";"):
+#     with open(nazwa_pliku, "r", encoding=kodowanie) as fp:
+#         dane = fp.readlines()
+#     return [tuple(wiersz.strip().split(separator)) for wiersz in dane]
 
 
-def czytaj_plik_do_slownika(nazwa_pliku, kodowanie="utf-8", separator=";"):
-    dane_z_pliku = czytaj_plik_do_listy_tupli(nazwa_pliku, kodowanie, separator)
-    lista_wyjsciowa = [
-        {
-            "imie": osoba[0],
-            "nazwisko": osoba[1],
-            "wzrost": float(osoba[2]),
-            "waga": float(osoba[3])
-        }
-        for osoba in dane_z_pliku
-    ]
-    return lista_wyjsciowa
+# def czytaj_plik_do_slownika(nazwa_pliku, kodowanie="utf-8", separator=";"):
+#     dane_z_pliku = czytaj_plik_do_listy_tupli(nazwa_pliku, kodowanie, separator)
+#     lista_wyjsciowa = [
+#         {
+#             "imie": osoba[0],
+#             "nazwisko": osoba[1],
+#             "wzrost": float(osoba[2]),
+#             "waga": float(osoba[3])
+#         }
+#         for osoba in dane_z_pliku
+#     ]
+#     return lista_wyjsciowa
 
 
-zawodnicy = czytaj_plik_do_slownika("zawodnicy.csv")
-print(zawodnicy)
+# zawodnicy = czytaj_plik_do_slownika("zawodnicy.csv")
+# print(zawodnicy)
+
+
+# ZADANIE
+"""
+Przygotuj funkcję, która wyliczy na podstawie wagi i wzrostu podany w cm (parametry) BMI z dokładnością do 2 miejsc po przecinku.
+W przypadku pojawienia się wyjątku - wypisze na konsoli błąd i zwróci wartość -1 
+
+BMI = kg/m2
+"""
+
 
 # funkcje: czytanie z pliku, liczenie bmi
 # moduły: plik i obliczenia
