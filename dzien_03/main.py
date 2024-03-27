@@ -468,11 +468,11 @@ Zapisz te osoby do pliku CSV, gdzie kolumny rozdzielone są ";"
 
 
 # faker - generowanie listy dictów i zapis do jsona
-import json
+# import json
 
-from faker import Faker
+# from faker import Faker
 
-f = Faker("pl")
+# f = Faker("pl")
 
 # tradycyjnie
 # spoleczenstwo = []
@@ -488,23 +488,26 @@ f = Faker("pl")
 #     spoleczenstwo.append(osoba)
 
 # lista składana
-spoleczenstwo = [
-    {
-        "first_name": f.first_name(),
-        "last_name": f.last_name(),
-        "company": f.company(),
-        "email": f.email(),
-        "phone_number": f.phone_number(),
-        "city": f.city(),
-    }
-    for _ in range(10_000)
-]
+# spoleczenstwo = [
+#     {
+#         "first_name": f.first_name(),
+#         "last_name": f.last_name(),
+#         "company": f.company(),
+#         "email": f.email(),
+#         "phone_number": f.phone_number(),
+#         "city": f.city(),
+#     }
+#     for _ in range(10_000)
+# ]
 
-with open("10000_osob.json", "w", encoding="utf-8") as fp:
-    json.dump(spoleczenstwo, fp)
+# with open("10000_osob.json", "w", encoding="utf-8") as fp:
+#     json.dump(spoleczenstwo, fp)
+
+
 
 
 # pandas - czytanie csv / excela + iterrows() + dict z df
+# pip install pandas openpyxl
 
 
 # funkcje: czytanie z pliku, liczenie bmi
