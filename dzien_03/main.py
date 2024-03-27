@@ -635,5 +635,6 @@ dane = narzedzia.czytaj_plik_do_slownika("zawodnicy.csv")
 
 
 # iteracja po dane
-
-narzedzia.policz_bmi()
+....
+.. = narzedzia.policz_bmi(..., ...)
+print(....)
