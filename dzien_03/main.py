@@ -288,7 +288,38 @@ Wynik, który zwróci funkcja wypisz na ekranie
 
 # print("Koniec programu")
 
+
 # argumenty domyślne
+
+# def pozdrow(imie="ktoś", miasto="nikąd"):
+#     return f"Pozdrawiam {imie} z {miasto}"
+
+
+# ciag = pozdrow("Ania", "Grudziądz")
+# print(ciag)
+
+
+# ciag = pozdrow("Kasia")
+# print(ciag)
+
+
+# ciag = pozdrow(miasto="Rzeszów")
+# print(ciag)
+
+
+# ciag = pozdrow()
+# print(ciag)
+
+# ZADANIE
+
+"""
+Napisz funkcję która zwróci pod postacią listy list zawartość pliku, którego nazwę przekażemy przez pierwszy argument funkcji.
+Plik ma być otwarty z kodowaniem podanym jako drugi argument funkcji. Jeśli kodowanie nie zostanie podane ma przyjąć utf-8.
+Wyświetl wynik zwrócony przez funkcję.
+"""
+
+
+
 
 # argumenty args i kwargs
 
