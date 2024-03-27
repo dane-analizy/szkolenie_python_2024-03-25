@@ -355,17 +355,59 @@ Zwracana ma być lista krotek.
 """
 
 
-def czytaj_plik(nazwa_pliku, kodowanie="utf-8", separator=";"):
+# def czytaj_plik(nazwa_pliku, kodowanie="utf-8", separator=";"):
 
-    with open(nazwa_pliku, "r", encoding=kodowanie) as fp:
-        dane = fp.readlines()
+#     with open(nazwa_pliku, "r", encoding=kodowanie) as fp:
+#         dane = fp.readlines()
 
-    return [tuple(wiersz.strip().split(separator)) for wiersz in set(dane)]
+#     return [tuple(wiersz.strip().split(separator)) for wiersz in set(dane)]
 
 
-dane_z_pliku = czytaj_plik("zawodnicy.csv")
-print(dane_z_pliku)
+# dane_z_pliku = czytaj_plik("zawodnicy.csv")
+# print(dane_z_pliku)
 
 # argumenty args i kwargs
+# def funkcja(a, b, *args):
+#     print(f"{a=}")
+#     print(f"{b=}")
+#     print(f"{args=}")
+#     for i,arg in enumerate(args):
+#         print(f"args[{i}] = {arg}")
+
+# funkcja(1, 10, 50, "ala", 100, "ma", 1000, "kota")
+
+
+# def funkcja(*args):
+#     print(f"{args=}")
+#     for i,arg in enumerate(args):
+#         print(f"args[{i}] = {arg}")
+
+# funkcja(1, 10, 50, "ala", 100, "ma", 1000, "kota")
+
+
+# argumenty klucz wartość
+# def funkcja(**kwargs):
+#     print(f"{kwargs=}")
+
+# funkcja(liczba1=1, dziesiatka=10, liczba2=50, imie="ala")
+
+# def zapis_czlowieka_do_bazy(imie, nazwisko, **kwargs):
+#     print(f"{kwargs=}")
+
+#     print(f"{imie} {nazwisko}")
+#     print(f"Numer telefonu: {kwargs.get('nr_tel')}")
+#     print(f"Wiek: {kwargs.get('wiek')}")
+#     print(f"Miasto: {kwargs.get('miasto')}")
+
+
+# # zapis_czlowieka_do_bazy("Jan", "Kowalski", "Warszawa")
+# # zapis_czlowieka_do_bazy("Jan", "Kowalski", miasto="Warszawa")
+# zapis_czlowieka_do_bazy("Jan", "Kowalski", miasto="Warszawa", data_urodzenia="2024-12-12")
+
 
 # Faker
+# instalowanie pakietów:
+# pip install nazwa-pakietu
+# np: pip install faker
+
+# repozytorium z pakietami - https://pypi.org/
