@@ -435,3 +435,77 @@ Korzystając z pakietu Faker wygeneruj 10 000 anonimowych osób. Każda osoba ma
 email (email()),  numer telefonu (phone_number()) i miejsce zamieszkania (city()).
 Zapisz te osoby do pliku CSV, gdzie kolumny rozdzielone są ";"
 """
+
+# otwórz plik i do niego zapisz ludź po ludziu
+# from faker import Faker
+
+# f = Faker("pl")
+
+# with open("10000_osob.csv", "w", encoding="utf-8") as fp:
+#     for _ in range(10_000):
+#         osoba = f"{f.first_name()};{f.last_name()};{f.company()};{f.email()};{f.phone_number()};{f.city()}\n"
+#         fp.write(osoba)
+
+
+# zrób listę ludzi i całą zapisz do pliku
+# from faker import Faker
+# f = Faker("pl")
+
+# # tradycyjnie
+# spoleczenstwo = []
+# for _ in range(10_000):
+#     osoba = f"{f.first_name()};{f.last_name()};{f.company()};{f.email()};{f.phone_number()};{f.city()}\n"
+#     spoleczenstwo.append(osoba)
+
+# # lista składana
+# spoleczenstwo = [
+#     f"{f.first_name()};{f.last_name()};{f.company()};{f.email()};{f.phone_number()};{f.city()}\n"
+#     for _ in range(10_000)
+# ]
+
+# with open("10000_osob_v2.csv", "w", encoding="utf-8") as fp:
+#     fp.writelines(spoleczenstwo)
+
+
+# faker - generowanie listy dictów i zapis do jsona
+import json
+
+from faker import Faker
+
+f = Faker("pl")
+
+# tradycyjnie
+# spoleczenstwo = []
+# for _ in range(10_000):
+#     osoba = {
+#         "first_name": f.first_name(),
+#         "last_name": f.last_name(),
+#         "company": f.company(),
+#         "email": f.email(),
+#         "phone_number": f.phone_number(),
+#         "city": f.city(),
+#     }
+#     spoleczenstwo.append(osoba)
+
+# lista składana
+spoleczenstwo = [
+    {
+        "first_name": f.first_name(),
+        "last_name": f.last_name(),
+        "company": f.company(),
+        "email": f.email(),
+        "phone_number": f.phone_number(),
+        "city": f.city(),
+    }
+    for _ in range(10_000)
+]
+
+with open("10000_osob.json", "w", encoding="utf-8") as fp:
+    json.dump(spoleczenstwo, fp)
+
+
+# pandas - czytanie csv / excela + iterrows() + dict z df
+
+
+# funkcje: czytanie z pliku, liczenie bmi
+# moduły: plik i obliczenia
