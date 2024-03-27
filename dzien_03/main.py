@@ -620,3 +620,20 @@ BMI = kg/m2
 
 
 # moduły: plik i obliczenia
+
+
+
+# ZADANIE
+
+"""
+NA podstawie szczątków kodu i przygotowanych wcześniej funkcji  napisz resztę - wczytaj dane z pliku do listy słowników,
+a potem dla każego rekordu wylicz BMI i wyświelt razem z imieniem i nazwiskiem
+"""
+import narzedzia
+
+dane = narzedzia.czytaj_plik_do_slownika("zawodnicy.csv")
+
+
+# iteracja po dane
+
+narzedzia.policz_bmi()
