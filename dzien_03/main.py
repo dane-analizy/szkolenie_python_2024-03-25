@@ -668,3 +668,21 @@ a potem dla każdego rekordu wylicz BMI i wyświetl razem z imieniem i nazwiskie
 
 
 # print(__name__)
+
+
+# ZADANIE
+"""
+Stwórz pakiet utils, a w nim dwa moduły: file = odpowiedzialny za czytanie z pliku, calc = odpowiedzialny za obliczenia.
+Zmodyfikuj kod tak, aby korzystał z funkcji z tego nowego pakietu
+"""
+
+# pakiet = zbiór modułów w jednym katalogu
+
+from utils.file import czytaj_plik_do_slownika
+
+dane = czytaj_plik_do_slownika("zawodnicy.csv")
+
+# iteracja po dane
+for osoba in dane:
+    bmi = policz_bmi(osoba["waga"], osoba["wzrost"])
+    print(f'{osoba["imie"]} {osoba["nazwisko"]} ma współczynnik BMI = {bmi}')
