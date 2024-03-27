@@ -355,6 +355,17 @@ Zwracana ma być lista krotek.
 """
 
 
+def czytaj_plik(nazwa_pliku, kodowanie="utf-8", separator=";"):
+
+    with open(nazwa_pliku, "r", encoding=kodowanie) as fp:
+        dane = fp.readlines()
+
+    return [tuple(wiersz.strip().split(separator)) for wiersz in set(dane)]
+
+
+dane_z_pliku = czytaj_plik("zawodnicy.csv")
+print(dane_z_pliku)
+
 # argumenty args i kwargs
 
 # Faker
