@@ -602,5 +602,21 @@ BMI = kg/m2
 """
 
 
-# funkcje: czytanie z pliku, liczenie bmi
+# funkcja liczenia bmi
+
+# def policz_bmi(masa, wzrost):
+#     wzrost_m = wzrost/100
+#     try:
+#         bmi = masa / (wzrost_m**2)
+#     except Exception as e:
+#         print(e)
+#         return -1
+#     return round(bmi, 2)
+
+
+# print(policz_bmi(80, 180))
+# print(policz_bmi(0, 180))
+# print(policz_bmi(80, 0))
+
+
 # moduły: plik i obliczenia
