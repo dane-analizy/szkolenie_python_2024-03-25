@@ -411,3 +411,25 @@ Zwracana ma być lista krotek.
 # np: pip install faker
 
 # repozytorium z pakietami - https://pypi.org/
+
+
+# import faker
+
+# f = faker.Faker()
+
+
+# from faker import Faker
+
+# f = Faker("pl")
+
+# print(f.street_name())
+
+# print(f.address())
+
+
+# ZADANIE
+"""
+Korzystając z pakietu Faker wygeneruj 10 000 anonimowych osób. Każda osoba ma mieć: imię (first_name()), nazwisko (last_name()), nazwę firmy (company()),
+email (email()),  numer telefonu (phone_number()) i miejsce zamieszkania (city()).
+Zapisz te osoby do pliku CSV, gdzie kolumny rozdzielone są ";"
+"""
