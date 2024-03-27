@@ -676,13 +676,101 @@ Stwórz pakiet utils, a w nim dwa moduły: file = odpowiedzialny za czytanie z p
 Zmodyfikuj kod tak, aby korzystał z funkcji z tego nowego pakietu
 """
 
-# pakiet = zbiór modułów w jednym katalogu
+# pakiet = zbiór modułów w jednym katalogu + plik __init__.py (może być pusty) w tym katalogu
 
-from utils.file import czytaj_plik_do_slownika
+# from utils.calc import policz_bmi
+# from utils.file import czytaj_plik_do_slownika
 
-dane = czytaj_plik_do_slownika("zawodnicy.csv")
+# dane = czytaj_plik_do_slownika("zawodnicy.csv")
 
-# iteracja po dane
-for osoba in dane:
-    bmi = policz_bmi(osoba["waga"], osoba["wzrost"])
-    print(f'{osoba["imie"]} {osoba["nazwisko"]} ma współczynnik BMI = {bmi}')
+# # iteracja po dane
+# for osoba in dane:
+#     bmi = policz_bmi(osoba["waga"], osoba["wzrost"])
+#     print(f'{osoba["imie"]} {osoba["nazwisko"]} ma współczynnik BMI = {bmi}')
+
+
+# programowanie obiektowe - klasy i metody
+
+
+# class Auto:
+#     marka = None
+#     model = None
+#     poj_silnika = None
+#     nr_rej = None
+
+#     def __init__(self, init_marka, init_model, init_poj_silnika=1000, init_nr_rej="nieznany"):
+#         print("Buduję auto")
+#         self.marka = init_marka
+#         self.model = init_model
+#         self.poj_silnika = init_poj_silnika
+#         self.nr_rej = init_nr_rej
+
+#     def trabie(self):
+#         print(f"{self.nr_rej} robi bip bip")
+
+#     def info(self):
+#         print(f"{self.marka=}\n{self.model=}\n{self.poj_silnika=}\n{self.nr_rej=}\n")
+#         # print(f"{self.strona=}")
+#         return f"{self.marka=}\n{self.model=}\n{self.poj_silnika=}\n{self.nr_rej=}\n"
+
+#     def skret(self, strona):
+#         print(f"{self.nr_rej} skręca w {strona}")
+#         self.strona = strona
+
+#     # metoda używana przy print()
+#     def __repr__(self):
+#         return self.info()
+
+#     # metody konieczne, aby porównywać obiekty TEJ SAMEJ KLASY
+#     def __eq__(self, other):
+#         return self.poj_silnika == other.poj_silnika
+
+#     def __lt__(self, other):
+#         return self.poj_silnika < other.poj_silnika
+
+#     def __le__(self, other):
+#         return self.poj_silnika <= other.poj_silnika
+
+
+# print(Auto)
+# car1 = Auto()
+# print(car1)
+
+# car2 = Auto()
+# print(car2)
+
+# car = Auto("ford", "escort")
+# car.trabie()
+# car.info()
+
+
+# car = Auto("ford", "escort", 2400, "WA 12345")
+# car.trabie()
+# car.info()
+
+# car = Auto("ford", "escort", 2400, "WA 12345")
+# car.skret("w lewo")
+# car.info()
+
+# car1 = Auto("ford", "escort", 2400, "WA 12345")
+# car2 = Auto("ford", "focus", 2100, "DD 12345")
+
+# print(car1 > car2)
+
+# print(car1)
+
+
+# del car1
+
+# print(car1)
+
+
+# ZADANIE
+"""
+Korzystając z przygotowanego pakietu wczytaj dane z zawodnicy.csv i dla każdego wiersza utwórz obiekty klasy Player.
+Wcześniej zdefiniuj klasę - niech ma atrybuty:
+ - imie
+ - wzrost
+oraz metodę __repr__.
+Po stworzeniu obiektu użyj na nim print()
+"""
