@@ -162,41 +162,130 @@ Odpowiedź z API:
 """
 
 
-from tools.internet import get_json_from_url
+# from tools.internet import get_json_from_url
 
-DATA_OD = "2024-01-01"
-DATA_DO = "2024-03-28"
+# DATA_OD = "2024-01-01"
+# DATA_DO = "2024-03-28"
 
-API_URL = (
-    f"https://api.nbp.pl/api/exchangerates/rates/a/usd/{DATA_OD}/{DATA_DO}/?format=json"
-)
-
-
-def nbp_rates_to_tuple(notowania):
-    return [tuple([el["effectiveDate"], el["no"], el["mid"]]) for el in notowania]
+# API_URL = (
+#     f"https://api.nbp.pl/api/exchangerates/rates/a/usd/{DATA_OD}/{DATA_DO}/?format=json"
+# )
 
 
-def tuple_list_to_file(lista_elementow, lista_nazw, nazwa_pliku):
-    with open(nazwa_pliku, "w", encoding="utf-8") as f:
-
-        wiersz_naglowek = ";".join([str(e) for e in lista_nazw])
-        f.write(wiersz_naglowek + "\n")
-
-        for el in lista_elementow:
-            wiersz = ";".join([str(e) for e in el])
-            f.write(wiersz + "\n")
+# def nbp_rates_to_tuple(notowania):
+#     return [tuple([el["effectiveDate"], el["no"], el["mid"]]) for el in notowania]
 
 
-def main():
-    dane = get_json_from_url(API_URL)
-    notowania = dane["rates"]
-    notowania = nbp_rates_to_tuple(notowania)
-    tuple_list_to_file(
-        lista_elementow=notowania,
-        lista_nazw=["data", "tabela", "kurs"],
-        nazwa_pliku="usd.csv",
-    )
+# def tuple_list_to_file(lista_elementow, lista_nazw, nazwa_pliku):
+#     with open(nazwa_pliku, "w", encoding="utf-8") as f:
+
+#         wiersz_naglowek = ";".join([str(e) for e in lista_nazw])
+#         f.write(wiersz_naglowek + "\n")
+
+#         for el in lista_elementow:
+#             wiersz = ";".join([str(e) for e in el])
+#             f.write(wiersz + "\n")
 
 
-if __name__ == "__main__":
-    main()
+# def main():
+#     dane = get_json_from_url(API_URL)
+#     notowania = dane["rates"]
+#     notowania = nbp_rates_to_tuple(notowania)
+#     tuple_list_to_file(
+#         lista_elementow=notowania,
+#         lista_nazw=["data", "tabela", "kurs"],
+#         nazwa_pliku="usd.csv",
+#     )
+
+
+# if __name__ == "__main__":
+#     main()
+
+
+# wersja po przerzuceniu do tools/files.py funkcji tuple_list_to_file()
+
+
+# from tools.files import tuple_list_to_file
+# from tools.internet import get_json_from_url
+
+# DATA_OD = "2024-01-01"
+# DATA_DO = "2024-03-28"
+
+# API_URL = (
+#     f"https://api.nbp.pl/api/exchangerates/rates/a/usd/{DATA_OD}/{DATA_DO}/?format=json"
+# )
+
+
+# def nbp_rates_to_tuple(notowania):
+#     return [tuple([el["effectiveDate"], el["no"], el["mid"]]) for el in notowania]
+
+
+# def main():
+#     dane = get_json_from_url(API_URL)
+#     notowania = dane["rates"]
+#     notowania = nbp_rates_to_tuple(notowania)
+#     tuple_list_to_file(
+#         lista_elementow=notowania,
+#         lista_nazw=["data", "tabela", "kurs"],
+#         nazwa_pliku="usd.csv",
+#     )
+
+
+# if __name__ == "__main__":
+#     main()
+
+
+# requests.POST - wysyłanie danych
+# poligon doświadczalny https://httpbin.org/
+
+
+# import requests
+
+# res = requests.post("https://httpbin.org/post")
+# print(res)
+
+# print(res.json())
+
+
+# import requests
+
+# res = requests.post("https://httpbin.org/post?arg1=abs&arg2=123")
+# print(res)
+
+# print(res.json())
+
+
+# import requests
+
+# dane_json = {"klucz1": 1, "klucz2": "abc"}
+# dane_data = "ciag bajtow"
+
+# res = requests.post("https://httpbin.org/post", data=dane_data)
+# print(res)
+
+# print(res.json())
+
+
+# import requests
+
+# dane_json = {"klucz1": 1, "klucz2": "abc"}
+# dane_data = "ciag bajtow"
+
+# res = requests.post("https://httpbin.org/post", json=dane_json)
+# print(res)
+
+# print(res.json())
+
+
+# import requests
+# from requests.auth import HTTPBasicAuth
+
+# login = "user1234"
+# haslo = "tajne_haslo"
+
+# res = requests.get(
+#     "https://httpbin.org/basic-auth/user1234/tajne_haslo",
+#     auth=HTTPBasicAuth(login, haslo)
+# )
+# print(res)
+# print(res.json())
