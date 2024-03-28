@@ -426,3 +426,15 @@ Przepisz tabelkę players z bazy danych do pliku csv.
 """
 
 # budujemy moduł tools/db.py
+
+from tools.config import read_config
+from tools.db import get_sql_results
+from tools.files import tuple_list_to_file
+
+NAZWA_PLIKU_WYNIKOWEGO = "players.csv"
+SQL_QUERY = "SELECT * FROM players"
+KOLUMNY = ["id", "imie", "nazwisko", "wzrost_m", "waga_kg"]
+
+konfiguracja = read_config("config_db.yaml")
+wyniki_z_bazy = get_sql_results(konfiguracja, SQL_QUERY)
+tuple_list_to_file(wyniki_z_bazy, KOLUMNY, NAZWA_PLIKU_WYNIKOWEGO)
