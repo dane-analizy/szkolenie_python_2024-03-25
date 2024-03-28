@@ -11,7 +11,7 @@ def get_db_connection_str(db_config):
 #     return "sqlite:///lokalna_baza.sqlite"
 
 
-def get_sql_results(db_config, sql_query):
+def db_connect_open(db_config):
     # connection string zbudowany z konfiguracji
     conn_str = get_db_connection_str(db_config)
 
@@ -20,11 +20,20 @@ def get_sql_results(db_config, sql_query):
 
     # podłączamy się do konkretnej bazy danych
     connection = engine.connect()
+    return connection
+
+
+def db_connect_close(connection):
+    # zamknięcie połączenia z bazą
+    connection.close()
+
+
+def get_sql_results(db_config, sql_query):
+    connection = db_connect_open(db_config)
 
     results = connection.execute(text(sql_query))
     connection.commit()
 
-    # zamknięcie połączenia z bazą
-    connection.close()
+    db_connect_close(connection)
 
     return list(results)

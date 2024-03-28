@@ -473,13 +473,22 @@ Odpowiedź z API:
 #     time.sleep(1)
 
 
-
-
 # ZADANIE
 
 """
-Pobierz dowcipy jak porzednio, ale zamiast wypisywać je na ekranie - zapisz do bazy, do tabeli "jokes"
+Pobierz dowcipy jak poprzednio, ale zamiast wypisywać je na ekranie - zapisz do bazy, do tabeli "jokes"
 """
+
+
+import time
+
+from sqlalchemy import text
+from tools.config import read_config
+from tools.db import db_connect_close, db_connect_open
+from tools.internet import get_json_from_url
+
+API_URL = "https://official-joke-api.appspot.com/random_joke"
+CONFIG_FILE = "config_db.yaml"
 
 
 def create_table(db_conn):
@@ -495,7 +504,6 @@ def create_table(db_conn):
     res = db_conn.commit()
 
 
-
 def insert_joke(joke, db_conn):
     # użycie słownika jako sposobu na przekazanie parametrów do zapytania SQL
     sql_query = f"""
@@ -505,3 +513,27 @@ def insert_joke(joke, db_conn):
     s = text(sql_query)
     db_conn.execute(s, joke)
     db_conn.commit()
+
+
+def main():
+    conf = read_config(CONFIG_FILE)
+    db_con = db_connect_open(conf)
+
+    create_table(db_con)
+
+    for _ in range(100):
+        dowcip = get_json_from_url(API_URL)
+        if dowcip:
+            print(f"A: {dowcip['setup']}\nB: {dowcip['punchline']}", end="\n\n\n")
+            insert_joke(dowcip, db_con)
+
+        time.sleep(0.1)
+
+    db_connect_close(db_con)
+
+
+if __name__ == "__main__":
+    main()
+
+
+# doc-string

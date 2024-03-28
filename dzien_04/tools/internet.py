@@ -3,7 +3,7 @@ import requests
 
 def get_json_from_url(url):
 
-    res = requests.get(url)
+    res = requests.get(url, verify=False)
 
     # czy udało się poprawnie odpytać adres url?
     if res.status_code != 200:
