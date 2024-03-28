@@ -390,10 +390,16 @@ values ('Krzysztof','Jarzyna', 1.68, 70);
 from sqlalchemy import create_engine
 from tools.config import read_config
 
-db_config = read_config("db_config.yaml")
+db_config = read_config("config_db.yaml")
 print(db_config)
 
-
+# connection string zbudowany z konfiguracji
 conn_str = f"postgresql+psycopg2://{db_config['db_user']}:{db_config['db_pass']}@{db_config['db_host']}:{db_config['db_port']}/{db_config['db_name']}"
+
+# budujemy silnik bazodanowy
 engine = create_engine(conn_str)
 print(engine)
+
+# podłączamy się do konkretnej bazy danych
+connection = engine.connect()
+print(connection)
