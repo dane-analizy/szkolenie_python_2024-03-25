@@ -38,13 +38,37 @@
 
 
 # ZADANIE
+
 """
 Korzystając z API NBP - endpoint: https://api.nbp.pl/api/exchangerates/tables/a/?format=json
 pobierz listę aktualnych notowań i wyświetl z niej notowania walut: EUR, USD, CHF.
 """
 
 # import requests
-# get do endpointa
+# get do endpointa https://api.nbp.pl/api/exchangerates/tables/a/?format=json
 # odpowiedź via .json() do listy dictów
-# w kluczu rates jest tabela z notawoaniami walut
-# z tej tablei trzeba wyjąć odpowiednie elementy z kluczem code pasującym do waluty i je wywietlić
+# w kluczu rates jest tabela z notowaniami walut
+# z tej tabeli trzeba wyjąć odpowiednie elementy z kluczem code pasującym do waluty i je wyświetlić
+
+import requests
+
+
+BASE_URL = "https://api.nbp.pl/api/exchangerates/tables/a/?format=json"
+OBSLUGIWANE_WALUTY = ("EUR", "CHF", "USD", "IDR")
+
+
+res = requests.get(BASE_URL)
+
+if res.status_code != 200:
+    print(f"Problem z usługą {BASE_URL}")
+    exit()
+
+cala_odpowiedz = res.json()
+tabela_kursow = cala_odpowiedz[0]["rates"]
+
+for el in tabela_kursow:
+    if el["code"] in OBSLUGIWANE_WALUTY:
+        print(f'Aktualny kurs {el["currency"]} ({el["code"]}) = {el["mid"]}')
+
+
+# konfiguracja - yaml
