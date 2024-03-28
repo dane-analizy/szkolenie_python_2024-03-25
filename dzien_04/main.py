@@ -77,32 +77,45 @@ pobierz listę aktualnych notowań i wyświetl z niej notowania walut: EUR, USD,
 
 # pip install pyyaml
 
-import yaml
-import requests
+# import yaml
+# import requests
 
 
-# plik z konfiguracją"
-CONFIG_FILE = "waluty.yaml"
+# # plik z konfiguracją"
+# CONFIG_FILE = "waluty.yaml"
 
 
-# wczytanie konfiguracji
-with open(CONFIG_FILE, "r", encoding="utf-8") as f:
-    config = yaml.safe_load(f)
+# # wczytanie konfiguracji
+# with open(CONFIG_FILE, "r", encoding="utf-8") as f:
+#     config = yaml.safe_load(f)
 
 
-# odpytanie NBP
-res = requests.get(config['BASE_URL'])
+# # odpytanie NBP
+# res = requests.get(config['BASE_URL'])
 
-# czy udało się poprawnie odpytać NBP
-if res.status_code != 200:
-    print(f"Problem z usługą {config['BASE_URL']}")
-    exit()
+# # czy udało się poprawnie odpytać NBP
+# if res.status_code != 200:
+#     print(f"Problem z usługą {config['BASE_URL']}")
+#     exit()
 
-# przetworzenie odpowiedzi z NBP
-cala_odpowiedz = res.json()
-tabela_kursow = cala_odpowiedz[0]["rates"]
+# # przetworzenie odpowiedzi z NBP
+# cala_odpowiedz = res.json()
+# tabela_kursow = cala_odpowiedz[0]["rates"]
 
-# wyświetlenie kursów wg listy z konfigu
-for el in tabela_kursow:
-    if el["code"] in config['OBSLUGIWANE_WALUTY']:
-        print(f'Aktualny kurs {el["currency"]} ({el["code"]}) = {el["mid"]}')
+# # wyświetlenie kursów wg listy z konfigu
+# for el in tabela_kursow:
+#     if el["code"] in config['OBSLUGIWANE_WALUTY']:
+#         print(f'Aktualny kurs {el["currency"]} ({el["code"]}) = {el["mid"]}')
+
+
+
+# ZADANIE
+
+"""
+Utwórz nowy pakiet "tools" z modułem "internet" oraz modułem "config".
+
+W "internet" powinna znaleźć się funkcja, która z podanego jako argument adresu URL pobiera zawartość i zwraca JSON (słownik). Jeśli w pobranej
+zawartości jests lista - zwracamy pierwszy element z tej listy. Jeśli nie uda się pobrać zawartości to zwracany jest pusty słownik "return {}".
+
+W "config" wrzuć funkcję czytającą konfigurację z pliku YAML podanego jako parametr.
+"""
