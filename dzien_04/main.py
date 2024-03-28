@@ -120,14 +120,22 @@ W "config" wrzuć funkcję czytającą konfigurację z pliku YAML podanego jako 
 """
 
 
-from tools.internet import get_json_from_url
-from tools.config import read_config
+# from tools.internet import get_json_from_url
+# from tools.config import read_config
 
-config = read_config("waluty.yaml")
+# config = read_config("waluty.yaml")
 
-res = get_json_from_url(config["BASE_URL"])
-tabela_kursow = res["rates"]
+# res = get_json_from_url(config["BASE_URL"])
+# tabela_kursow = res["rates"]
 
-for el in tabela_kursow:
-    if el["code"] in config['OBSLUGIWANE_WALUTY']:
-        print(f'Aktualny kurs {el["currency"]} ({el["code"]}) = {el["mid"]}')
+# for el in tabela_kursow:
+#     if el["code"] in config['OBSLUGIWANE_WALUTY']:
+#         print(f'Aktualny kurs {el["currency"]} ({el["code"]}) = {el["mid"]}')
+
+
+# ZADANIE
+"""
+Używając przygotowanego wcześniej pakietu:
+ - pobierz listę notować USD z okresu 2023-01-01 do 2024-03-28 ("https://api.nbp.pl/api/exchangerates/rates/a/usd/2023-01-01/2024-03-28/?format=json")
+ - do pliku USD.csv zapisz wszystkie pobrane wartości w formacie: data, numer notowania i kurs
+"""
