@@ -387,11 +387,11 @@ values ('Krzysztof','Jarzyna', 1.68, 70);
 # https://docs.sqlalchemy.org/en/20/core/engines.html#backend-specific-urls
 
 
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 from tools.config import read_config
 
 db_config = read_config("config_db.yaml")
-print(db_config)
+# print(db_config)
 
 # connection string zbudowany z konfiguracji
 conn_str = f"postgresql+psycopg2://{db_config['db_user']}:{db_config['db_pass']}@{db_config['db_host']}:{db_config['db_port']}/{db_config['db_name']}"
@@ -403,3 +403,10 @@ print(engine)
 # podłączamy się do konkretnej bazy danych
 connection = engine.connect()
 print(connection)
+
+
+results = connection.execute( text("SELECT * FROM players;") )
+print(results)
+
+for element in results:
+    print(element)
