@@ -24,4 +24,7 @@ def get_sql_results(db_config, sql_query):
     results = connection.execute(text(sql_query))
     connection.commit()
 
+    # zamknięcie połączenia z bazą
+    connection.close()
+
     return list(results)

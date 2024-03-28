@@ -460,14 +460,48 @@ Odpowiedź z API:
 }
 """
 
-import time
+# import time
 
-from tools.internet import get_json_from_url
+# from tools.internet import get_json_from_url
 
-API_URL = "https://official-joke-api.appspot.com/random_joke"
+# API_URL = "https://official-joke-api.appspot.com/random_joke"
 
-for _ in range(100):
-    dowcip = get_json_from_url(API_URL)
-    if dowcip:
-        print(f"A: {dowcip['setup']}\nB: {dowcip['punchline']}", end="\n\n\n")
-    time.sleep(1)
+# for _ in range(100):
+#     dowcip = get_json_from_url(API_URL)
+#     if dowcip:
+#         print(f"A: {dowcip['setup']}\nB: {dowcip['punchline']}", end="\n\n\n")
+#     time.sleep(1)
+
+
+
+
+# ZADANIE
+
+"""
+Pobierz dowcipy jak porzednio, ale zamiast wypisywać je na ekranie - zapisz do bazy, do tabeli "jokes"
+"""
+
+
+def create_table(db_conn):
+    sql_query = """
+    CREATE TABLE IF NOT EXISTS jokes (
+        type text,
+        setup text,
+        punchline text,
+        id int
+    );
+    """
+    db_conn.execute(text(sql_query))
+    res = db_conn.commit()
+
+
+
+def insert_joke(joke, db_conn):
+    # użycie słownika jako sposobu na przekazanie parametrów do zapytania SQL
+    sql_query = f"""
+    INSERT INTO jokes (type, setup, punchline, id)
+    VALUES (:type, :setup, :punchline, :id);
+    """
+    s = text(sql_query)
+    db_conn.execute(s, joke)
+    db_conn.commit()
