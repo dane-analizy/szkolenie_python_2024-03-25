@@ -13,6 +13,7 @@
 # print(d)
 # print(d[7])
 
+
 # ZADANIE
 
 """
@@ -787,3 +788,35 @@ Po stworzeniu obiektu użyj na nim print()
 
 # for z in lista_zawodnikow:
 #     print(z)
+
+
+# klasy - setter i getter
+
+# from models.zawodnik import Zawodnik, Konfiguracja
+
+# zaw = Zawodnik("Jan", 200)
+# print(zaw)
+
+# zaw.waga = 60
+# print(zaw)
+
+# print(zaw.imie)
+
+# zaw.set_wzrost(150)
+
+# print(zaw.bmi)
+
+# # polodzenie_do_bazy.ile_wyslanych_selectow
+
+# print(Konfiguracja.kolor)
+
+import time
+from models.zawodnik import Zawodnik, Konfiguracja
+
+zaw = Zawodnik("Jan", 200)
+print(zaw)
+print(zaw.teraz)
+
+time.sleep(5)
+print(zaw)
+print(zaw.teraz)
