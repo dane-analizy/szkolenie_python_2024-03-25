@@ -298,3 +298,42 @@ Korzystają z API NBP (endpoint https://api.nbp.pl/api/exchangerates/rates/a/usd
 pobierz tablicę z historycznymi notowaniami USD i wypisz na ekranie dni, w których dolar kosztował mniej niż 4 zł.
 Wykorzystaj już przygotowane funkcje i pakiety
 """
+
+
+"""
+Odpowiedź z API:
+{
+    ...
+    "rates": [
+        {
+            "no": "001/A/NBP/2024",
+            "effectiveDate": "2024-01-02",
+            "mid": 3.9432
+        },
+        {
+            "no": "002/A/NBP/2024",
+            "effectiveDate": "2024-01-03",
+            "mid": 3.9909
+        },
+        ...
+    ]
+}
+"""
+
+
+# from tools.internet import get_json_from_url
+
+# notowania_usd = get_json_from_url(
+#     "https://api.nbp.pl/api/exchangerates/rates/a/usd/2024-01-01/2024-03-26/?format=json"
+# )
+
+# notowania_usd_pod_4zl = [
+#     (dzien["effectiveDate"], dzien["mid"])
+#     for dzien in notowania_usd["rates"]
+#     if dzien["mid"] < 4
+# ]
+
+# notowania_usd_pod_4zl = sorted(notowania_usd_pod_4zl, key=lambda t: t[1])
+
+# for d in notowania_usd_pod_4zl:
+#     print(d[0], d[1])
