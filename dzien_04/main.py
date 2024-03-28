@@ -50,25 +50,59 @@ pobierz listę aktualnych notowań i wyświetl z niej notowania walut: EUR, USD,
 # w kluczu rates jest tabela z notowaniami walut
 # z tej tabeli trzeba wyjąć odpowiednie elementy z kluczem code pasującym do waluty i je wyświetlić
 
-import requests
+# import requests
 
 
-BASE_URL = "https://api.nbp.pl/api/exchangerates/tables/a/?format=json"
-OBSLUGIWANE_WALUTY = ("EUR", "CHF", "USD", "IDR")
+# BASE_URL = "https://api.nbp.pl/api/exchangerates/tables/a/?format=json"
+# OBSLUGIWANE_WALUTY = ("EUR", "CHF", "USD", "IDR")
 
 
-res = requests.get(BASE_URL)
+# res = requests.get(BASE_URL)
 
-if res.status_code != 200:
-    print(f"Problem z usługą {BASE_URL}")
-    exit()
+# if res.status_code != 200:
+#     print(f"Problem z usługą {BASE_URL}")
+#     exit()
 
-cala_odpowiedz = res.json()
-tabela_kursow = cala_odpowiedz[0]["rates"]
+# cala_odpowiedz = res.json()
+# tabela_kursow = cala_odpowiedz[0]["rates"]
 
-for el in tabela_kursow:
-    if el["code"] in OBSLUGIWANE_WALUTY:
-        print(f'Aktualny kurs {el["currency"]} ({el["code"]}) = {el["mid"]}')
+# for el in tabela_kursow:
+#     if el["code"] in OBSLUGIWANE_WALUTY:
+#         print(f'Aktualny kurs {el["currency"]} ({el["code"]}) = {el["mid"]}')
 
 
 # konfiguracja - yaml
+# https://blog.prokulski.science/2021/03/29/pliki-konfiguracyjne-python-r/
+
+
+# pip install pyyaml
+
+import yaml
+import requests
+
+
+# plik z konfiguracją"
+CONFIG_FILE = "waluty.yaml"
+
+
+# wczytanie konfiguracji
+with open(CONFIG_FILE, "r", encoding="utf-8") as f:
+    config = yaml.safe_load(f)
+
+
+# odpytanie NBP
+res = requests.get(config['BASE_URL'])
+
+# czy udało się poprawnie odpytać NBP
+if res.status_code != 200:
+    print(f"Problem z usługą {config['BASE_URL']}")
+    exit()
+
+# przetworzenie odpowiedzi z NBP
+cala_odpowiedz = res.json()
+tabela_kursow = cala_odpowiedz[0]["rates"]
+
+# wyświetlenie kursów wg listy z konfigu
+for el in tabela_kursow:
+    if el["code"] in config['OBSLUGIWANE_WALUTY']:
+        print(f'Aktualny kurs {el["currency"]} ({el["code"]}) = {el["mid"]}')
