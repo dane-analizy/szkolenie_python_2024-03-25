@@ -2,6 +2,14 @@ import requests
 
 
 def get_json_from_url(url):
+    """Pobiera JSONa z podanego adresu url
+
+    Args:
+        url (str): adres, z którego pobierzemy JSONa
+
+    Returns:
+        dict: pierwszy dict z listy / pusty dict w przypadku błędu
+    """
 
     res = requests.get(url, verify=False)
 

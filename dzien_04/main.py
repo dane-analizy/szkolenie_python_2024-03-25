@@ -492,6 +492,12 @@ CONFIG_FILE = "config_db.yaml"
 
 
 def create_table(db_conn):
+    """Funkcja tworzy tabelę `jokes` w bazie, o ile ta nie istnieje.
+    
+    :db_conn - połączenie do bazy danych
+    """
+    
+    
     sql_query = """
     CREATE TABLE IF NOT EXISTS jokes (
         type text,
