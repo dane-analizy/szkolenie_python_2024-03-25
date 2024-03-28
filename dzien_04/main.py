@@ -114,7 +114,20 @@ pobierz listę aktualnych notowań i wyświetl z niej notowania walut: EUR, USD,
 Utwórz nowy pakiet "tools" z modułem "internet" oraz modułem "config".
 
 W "internet" powinna znaleźć się funkcja get_json_from_url() , która z podanego jako argument adresu URL pobiera zawartość i zwraca JSON (słownik). Jeśli w pobranej
-zawartości jests lista - zwracamy pierwszy element z tej listy. Jeśli nie uda się pobrać zawartości to zwracany jest pusty słownik "return {}".
+zawartości jest lista - zwracamy pierwszy element z tej listy. Jeśli nie uda się pobrać zawartości to zwracany jest pusty słownik "return {}".
 
 W "config" wrzuć funkcję czytającą konfigurację z pliku YAML podanego jako parametr - read_config()
 """
+
+
+from tools.internet import get_json_from_url
+from tools.config import read_config
+
+config = read_config("waluty.yaml")
+
+res = get_json_from_url(config["BASE_URL"])
+tabela_kursow = res["rates"]
+
+for el in tabela_kursow:
+    if el["code"] in config['OBSLUGIWANE_WALUTY']:
+        print(f'Aktualny kurs {el["currency"]} ({el["code"]}) = {el["mid"]}')
