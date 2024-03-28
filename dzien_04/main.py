@@ -136,6 +136,6 @@ W "config" wrzuć funkcję czytającą konfigurację z pliku YAML podanego jako 
 # ZADANIE
 """
 Używając przygotowanego wcześniej pakietu:
- - pobierz listę notować USD z okresu 2023-01-01 do 2024-03-28 ("https://api.nbp.pl/api/exchangerates/rates/a/usd/2023-01-01/2024-03-28/?format=json")
+ - pobierz listę notować USD z okresu 2023-01-01 do 2024-03-28 ("https://api.nbp.pl/api/exchangerates/rates/a/usd/2024-01-01/2024-03-28/?format=json")
  - do pliku USD.csv zapisz wszystkie pobrane wartości w formacie: data, numer notowania i kurs
 """
