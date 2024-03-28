@@ -108,14 +108,13 @@ pobierz listę aktualnych notowań i wyświetl z niej notowania walut: EUR, USD,
 #         print(f'Aktualny kurs {el["currency"]} ({el["code"]}) = {el["mid"]}')
 
 
-
 # ZADANIE
 
 """
 Utwórz nowy pakiet "tools" z modułem "internet" oraz modułem "config".
 
-W "internet" powinna znaleźć się funkcja, która z podanego jako argument adresu URL pobiera zawartość i zwraca JSON (słownik). Jeśli w pobranej
+W "internet" powinna znaleźć się funkcja get_json_from_url() , która z podanego jako argument adresu URL pobiera zawartość i zwraca JSON (słownik). Jeśli w pobranej
 zawartości jests lista - zwracamy pierwszy element z tej listy. Jeśli nie uda się pobrać zawartości to zwracany jest pusty słownik "return {}".
 
-W "config" wrzuć funkcję czytającą konfigurację z pliku YAML podanego jako parametr.
+W "config" wrzuć funkcję czytającą konfigurację z pliku YAML podanego jako parametr - read_config()
 """
