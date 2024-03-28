@@ -392,3 +392,8 @@ from tools.config import read_config
 
 db_config = read_config("db_config.yaml")
 print(db_config)
+
+
+conn_str = f"postgresql+psycopg2://{db_config['db_user']}:{db_config['db_pass']}@{db_config['db_host']}:{db_config['db_port']}/{db_config['db_name']}"
+engine = create_engine(conn_str)
+print(engine)
