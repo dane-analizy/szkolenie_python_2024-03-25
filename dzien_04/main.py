@@ -459,3 +459,15 @@ Odpowiedź z API:
   "id": 119
 }
 """
+
+import time
+
+from tools.internet import get_json_from_url
+
+API_URL = "https://official-joke-api.appspot.com/random_joke"
+
+for _ in range(100):
+    dowcip = get_json_from_url(API_URL)
+    if dowcip:
+        print(f"A: {dowcip['setup']}\nB: {dowcip['punchline']}", end="\n\n\n")
+    time.sleep(1)
