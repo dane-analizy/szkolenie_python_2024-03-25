@@ -139,3 +139,64 @@ Używając przygotowanego wcześniej pakietu:
  - pobierz listę notować USD z okresu 2023-01-01 do 2024-03-28 ("https://api.nbp.pl/api/exchangerates/rates/a/usd/2024-01-01/2024-03-28/?format=json")
  - do pliku USD.csv zapisz wszystkie pobrane wartości w formacie: data, numer notowania i kurs
 """
+
+
+"""
+Odpowiedź z API:
+{
+    ...
+    "rates": [
+        {
+            "no": "001/A/NBP/2024",
+            "effectiveDate": "2024-01-02",
+            "mid": 3.9432
+        },
+        {
+            "no": "002/A/NBP/2024",
+            "effectiveDate": "2024-01-03",
+            "mid": 3.9909
+        },
+        ...
+    ]
+}
+"""
+
+
+from tools.internet import get_json_from_url
+
+DATA_OD = "2024-01-01"
+DATA_DO = "2024-03-28"
+
+API_URL = (
+    f"https://api.nbp.pl/api/exchangerates/rates/a/usd/{DATA_OD}/{DATA_DO}/?format=json"
+)
+
+
+def nbp_rates_to_tuple(notowania):
+    return [tuple([el["effectiveDate"], el["no"], el["mid"]]) for el in notowania]
+
+
+def tuple_list_to_file(lista_elementow, lista_nazw, nazwa_pliku):
+    with open(nazwa_pliku, "w", encoding="utf-8") as f:
+
+        wiersz_naglowek = ";".join([str(e) for e in lista_nazw])
+        f.write(wiersz_naglowek + "\n")
+
+        for el in lista_elementow:
+            wiersz = ";".join([str(e) for e in el])
+            f.write(wiersz + "\n")
+
+
+def main():
+    dane = get_json_from_url(API_URL)
+    notowania = dane["rates"]
+    notowania = nbp_rates_to_tuple(notowania)
+    tuple_list_to_file(
+        lista_elementow=notowania,
+        lista_nazw=["data", "tabela", "kurs"],
+        nazwa_pliku="usd.csv",
+    )
+
+
+if __name__ == "__main__":
+    main()
