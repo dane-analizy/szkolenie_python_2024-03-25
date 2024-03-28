@@ -419,9 +419,10 @@ values ('Krzysztof','Jarzyna', 1.68, 70);
 # connection.close()
 
 
-
 # ZADANIE
 
 """
 Przepisz tabelkę players z bazy danych do pliku csv.
 """
+
+# budujemy moduł tools/db.py

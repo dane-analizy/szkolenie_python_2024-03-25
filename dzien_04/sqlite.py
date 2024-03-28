@@ -1,6 +1,5 @@
 from sqlalchemy import create_engine, text
 
-
 engine = create_engine("sqlite:///lokalna_baza.sqlite")
 
 db_conn = engine.connect()
