@@ -447,3 +447,15 @@ Mamy API zwracające losowy dowcip: https://official-joke-api.appspot.com/random
 Odpytaj API o 100 dowcipów. Wyświetl każdy z nich na ekranie.
 Pomiędzy odpytaniami odczekaj 1 sekundę (time.sleep())
 """
+
+
+"""
+Odpowiedź z API:
+
+{
+  "type": "general",
+  "setup": "How do hens stay fit?",
+  "punchline": "They always egg-cercise!",
+  "id": 119
+}
+"""
