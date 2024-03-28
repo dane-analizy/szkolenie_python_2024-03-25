@@ -292,6 +292,7 @@ Odpowiedź z API:
 
 
 # ZADANIE
+
 """
 Korzystają z API NBP (endpoint https://api.nbp.pl/api/exchangerates/rates/a/usd/2024-01-01/2024-03-26/?format=json)
 pobierz tablicę z historycznymi notowaniami USD i wypisz na ekranie dni, w których dolar kosztował mniej niż 4 zł.
