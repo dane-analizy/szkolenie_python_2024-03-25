@@ -339,6 +339,8 @@ Odpowiedź z API:
 #     print(d[0], d[1])
 
 
+# w DBeaver -> SQL editor -> Open SQL Console, wkleić kod, zaznaczyć i uruchomić: Run SQL Query (pod prawym guzikiem) albo Ctrl+Enter)
+
 """
 create table players (
 	player_id serial primary key,
@@ -367,3 +369,26 @@ insert into players (first_name,last_name,height,weight)
 values ('Krzysztof','Jarzyna', 1.68, 70);
 
 """
+
+
+# pakiet SQLAlchemy - zainstaluj przez: pip install sqlalchemy
+
+# pakiety do konkretnych silników baz danych
+"""
+- pakiet do łączenia się z postgresql
+    - `pip install psycopg2`
+- pakiet do łączenia się z Oraclem
+    - `pip install cx_oracle`
+- pakiet do łączenia się z MS SQL
+    - `pip install pymssql`
+"""
+
+# jak budować connection string - per baza / pakiet
+# https://docs.sqlalchemy.org/en/20/core/engines.html#backend-specific-urls
+
+
+from sqlalchemy import create_engine
+from tools.config import read_config
+
+db_config = read_config("db_config.yaml")
+print(db_config)
