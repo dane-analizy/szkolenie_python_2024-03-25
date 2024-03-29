@@ -160,3 +160,4 @@ cython_debug/
 .idea/
 
 dzien_04/config_db.yaml
+jokes/config_db.yaml
