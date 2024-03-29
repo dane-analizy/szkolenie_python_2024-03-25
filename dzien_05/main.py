@@ -60,3 +60,5 @@ def home_page():
 if __name__ == "__main__":
     # debug=True powoduje, że Flask przeładuje aplikację po zmianie kodu
     app.run(debug=True)
+
+
