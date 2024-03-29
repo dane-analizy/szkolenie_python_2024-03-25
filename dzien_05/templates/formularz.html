@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <form action="/login" method="post">
+    <form action={{ url_for("login") }} method="post">
         Login: <input type="text" id="login_id" name="login_name" placeholder="podaj login"><br />
         Password: <input type="text" id="pass_id" name="pass_name" placeholder="podaj hasło"><br />
         <button type="submit">Zaloguj</button>
