@@ -33,6 +33,10 @@ def strona_pierwsza():
 
 
 if __name__ == "__main__":
-    app.run(
-        debug=True
-    )  # debug=True powoduje, że Flask przeładuje aplikację po zmianie kodu
+    # debug=True powoduje, że Flask przeładuje aplikację po zmianie kodu
+    app.run(debug=True)
+
+
+# ZADANIE
+
+# Do powyższej aplikacji dodaj kilka kolejnych strony.
