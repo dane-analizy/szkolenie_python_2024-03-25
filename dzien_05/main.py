@@ -27,5 +27,12 @@ def home_page():
     return "To ja, strona główna i życzę miłego dnia"
 
 
+@app.route("/stronapierwsza")
+def strona_pierwsza():
+    return "Jestem stroną pierwszą"
+
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(
+        debug=True
+    )  # debug=True powoduje, że Flask przeładuje aplikację po zmianie kodu
