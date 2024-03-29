@@ -58,7 +58,7 @@ def home_page():
 
 
 @app.route("/druga")
-def home_page():
+def druga_strona():
     return render_template("druga_strona.html")
 
 
