@@ -497,7 +497,6 @@ def create_table(db_conn):
     :db_conn - połączenie do bazy danych
     """
     
-    
     sql_query = """
     CREATE TABLE IF NOT EXISTS jokes (
         type text,
