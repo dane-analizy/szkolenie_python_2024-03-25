@@ -31,3 +31,8 @@ def o_nas():
 if __name__ == "__main__":
     # debug=True powoduje, że Flask przeładuje aplikację po zmianie kodu
     app.run(debug=True)
+
+
+# ZADANIE
+
+# Do szablonów wszystkich stron sklepu dodaj nawigację
