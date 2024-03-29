@@ -57,8 +57,28 @@ def home_page():
     return render_template("home.html")
 
 
+@app.route("/druga")
+def home_page():
+    return render_template("druga_strona.html")
+
+
+def dodawanie(a, b):
+    return a + b
+
+
+@app.route("/suma")
+def suma():
+    a = 1
+    b = 2
+    wynik = dodawanie(a, b)
+    return f'{{ "a": {a}, "b": {b}, "suma": {wynik} }}'
+
+
 if __name__ == "__main__":
     # debug=True powoduje, że Flask przeładuje aplikację po zmianie kodu
     app.run(debug=True)
 
 
+# ZADANIE
+
+# Dodaj kilka podstron, które będą pokazywać inne pliki html.
