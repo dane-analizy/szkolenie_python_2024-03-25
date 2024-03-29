@@ -49,3 +49,11 @@ if __name__ == "__main__":
 # ZADANIE
 
 # Bazując na wyświetlaniu słowników - zrób template pokazujące listę
+
+
+# ZADANIE
+"""
+Zrób endpointy:
+ - odejmujący liczby a i b, wywoływany w postaci /odejmowanie/a/b
+ - mnożący liczby a i b, wywoływany w postaci /mnozenie?a=..&b=...
+"""
