@@ -21,3 +21,8 @@ if __name__ == "__main__":
 # ZADANIE
 
 # dodaj do szablonu 'zmienna_z_kodu.html' wyświetlenie kolejnej zmiennej
+
+
+# ZADANIE
+
+# Bazując na wyświetlaniu słowników - zrób template pokazujące listę
