@@ -14,6 +14,12 @@ def main_dict():
     return render_template("slownik_z_kodu.html", abc=d)
 
 
+@app.route("/lista")
+def main_lista():
+    d = ("klucz1", "napis", "klucz2", 123, "klucz3", "jestem kluczem 3")
+    return render_template("lista_z_kodu.html", lista=d)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
 
