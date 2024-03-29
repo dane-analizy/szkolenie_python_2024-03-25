@@ -47,15 +47,14 @@
 # Do powyższej aplikacji dodaj kilka kolejnych strony.
 
 
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)  # nazwa będzie wzięta z nazwy pliku pythona
 
 
 @app.route("/")
 def home_page():
-    print("uruchamiam stronę główną")
-    return "To ja, strona główna i życzę miłego dnia"
+    return render_template("home.html")
 
 
 if __name__ == "__main__":
