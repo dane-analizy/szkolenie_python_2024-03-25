@@ -1,0 +1,6 @@
+<ul>
+    <li><a href="/">Strona główna</a></li>
+    {% for el in lista %}
+    <li><a href="/jokes/{{ el }}">{{ el }}</a></li>
+    {% endfor %}
+</ul>

@@ -526,7 +526,7 @@ def main():
 
     create_table(db_con)
 
-    for _ in range(100):
+    for _ in range(250):
         dowcip = get_json_from_url(API_URL)
         if dowcip:
             print(f"A: {dowcip['setup']}\nB: {dowcip['punchline']}", end="\n\n\n")
